@@ -1,0 +1,4 @@
+name: Label305
+gems: [jekyll-sass]
+markdown: redcarpet
+pygments: true
