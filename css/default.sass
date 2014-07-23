@@ -1,11 +1,31 @@
+@import includes
+
+h1
+	font-family: $main-type-font
+	font-weight: 300
+	font-size: 50px
+	margin: 0 0 20px 0
+	color: $green-color
+h2
+
+h3
+	font-family: $serif-type-font
+	font-size: 20px
+	color: $gray-color
+
+h4
+
+p
+
+a
+	text-decoration: none
+
 .row
 	margin-left: -10px !important
 	margin-right: -10px !important
 
 .wrapper
 	width: 100%
-	margin: 0
-	padding: 0
 
 .no-margin
 	margin: 0 !important
@@ -15,6 +35,9 @@
 
 .align-center
 	text-align: center
+
+.align-right
+	text-align: right
 
 //Colors
 
@@ -40,6 +63,22 @@
 
 .margin-left
 	margin-left: 20px
+
+
+.margin-40
+	margin: 40px
+
+.margin-top-40
+	margin-top: 40px
+
+.margin-right-40
+	margin-right: 40px
+
+.margin-bottom-40
+	margin-bottom: 40px
+
+.margin-left-40
+	margin-left: 40px
 
 //Paddings
 
@@ -77,5 +116,11 @@
 //Navigation
 
 nav
-	height: 60px
-	background: red
+	height: 80px
+
+	.menu-button
+		height: 40px
+		width: 40px
+		background-color: $gray-color
+		cursor: pointer
+		display: inline-block

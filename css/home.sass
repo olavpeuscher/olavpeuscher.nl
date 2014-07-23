@@ -1,3 +1,14 @@
+@import default
+
+.site-intro
+	margin: 80px 0 160px 0
+
+	.border-right-thick
+		border-right: 4px solid $black-color
+
+	.border-thin
+		border-top: 1px solid $black-color
+
 .item-wrapper
 	height: auto
 	position: relative
@@ -14,12 +25,18 @@
 			width: 100%
 			padding: 50% 0 0
 			display: block
-
 	
 	.item-image
-		
+		background-size: cover
+		background-position: center
 
 	.item-description
 		position: absolute
 		left: 0
 		bottom: 0
+
+#item-1,#item-3,#item-5,#item-7
+	background-image: url("../img/1.jpg")
+
+#item-2,#item-4,#item-6,#item-8
+	background-image: url("../img/2.jpg")

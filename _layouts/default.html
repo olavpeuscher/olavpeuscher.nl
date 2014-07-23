@@ -22,6 +22,9 @@
 
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+
 {% for css_name in page.css %}
     <link rel="stylesheet" type="text/css" href="/css/{{ css_name }}">
 
@@ -37,7 +40,9 @@
 	<body>
 		<!--HEADER-->
 		<header>
-			<nav class="wrapper"></nav>
+			<nav class="wrapper">
+				<div class="menu-button margin"></div>
+			</nav>
 		</header>
 			
 			{{ content }}
