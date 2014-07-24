@@ -187,35 +187,26 @@ nav
 	top: 0
 	z-index: 999
 
-	.menu-button
+	#menu-button
 		height: 40px
 		width: 40px
 		background-color: white
 		cursor: pointer
 		display: inline-block
 	
-	.contact-dropdown
+	#contact-dropdown
 		position: fixed
 		left: 60px
 		top: 60px
-		width: 0px
-		height: 60px
-		padding: 20px
+		width: 0
+		height: 0
+		padding: 0
 		color: $black-color
 		line-height: 20px
 		font-size: 16px
 		background: rgba(255,255,255,0.9)
-		opacity: 0
-		filter: alpha(opacity=0)
-		display: none
 		-webkit-transition: opacity 0.5s, -webkit-transform 0.5s
 		transition: opacity 0.5s, transform 0.5s
 
-	&:hover .contact-dropdown
-		display: block
-		opacity: 1
-		filter: alpha(opacity=100)
-		-webkit-transition: opacity 0.5s, -webkit-transform 0.5s
-		transition: opacity 0.5s, transform 0.5s
-		width: 350px
-
+		p
+			width: 200px
