@@ -1,7 +1,6 @@
 @import default
 
 .site-intro
-	padding: 33.33% 0 0
 	width: 100%
 	background-size: cover
 	background-position: center
@@ -16,25 +15,21 @@
 			font-weight: 700
 		h1, h3
 			width: 100%
+		h3
+			font-family: $main-type-font
+			font-weight: 300
+			font-size: 26px
+		a
+			color: white
+
+			&:hover
+				color: $red-color
+				text-decoration: none
 
 .item-wrapper
 	height: auto
 	position: relative
 	overflow: hidden
-
-	&.small
-
-		.item-image,
-		.item-intro
-			width: 100%
-			padding: 100% 0 0
-			display: block
-	&.big
-
-		.item-image
-			width: 100%
-			padding: 50% 0 0
-			display: block
 
 	&:hover .item-description
 		-webkit-transform: translate3d(0,0,0)
@@ -78,9 +73,6 @@
 		transform: translate3d(0,100px,0)
 		opacity: 0
 		filter: alpha(opacity=0)
-
-	.item-intro-title h3
-		font-size: 22px
 
 .my-subjects
 	padding: 120px 0
@@ -133,6 +125,8 @@
 	background-image: url("../img/sk20.jpg")
 #item-22
 	background-image: url("../img/muziekbank.jpg")
+#item-23
+	background-image: url("../img/bicycle.jpg")
 
 #rhodes
 	background-image: url("../img/rhodes.jpg")
