@@ -1,279 +1,231 @@
 @import includes
+@import ionicons
+@import fonts
 
 body
-	background-color: $gray-color
+  background-color: white
+  margin: 0
+  width: 100%
+  padding: 0
+  font-family: $main-type-font
 
-h1
-	font-family: $main-type-font
-	font-size: 80px
-	display: inline-block
 h2
-	font-weight: 700
-	font-size: 40px
-	display: inline-block
-
+  font-family: $roboto-slab
+  margin: 0 0 15px 0
+  padding: 0
+  min-height: 30px
+  line-height: 30px
+  font-size: 28px
+  color: $dark-gray-color
+  text-transform: uppercase
+  display: inline-block
 h3
-	font-family: $serif-type-font
-	font-size: 22px
-	color: $gray-color
-	margin: 0 0 10px 0
-	color: $black-color
-	display: inline-block
-
-h4
-	display: inline-block
-
+  font-family: $main-type-font
+  margin: 0 0 15px 0
+  min-height: 20px
+  line-height: 20px
+  font-size: 18px
+  text-transform: uppercase
+  display: inline-block
+  font-weight: 200
+  span
+    background-color: $dark-gray-color
+    color: white
+    line-height: 20px
+    padding: 3px 5px 3px 0
+    display: inline-block
+    float: left
+    &:last-child
+      padding: 3px 0
 p
-	font-family: $main-type-font
-	font-size: 16px
-	font-weight: 300
-	color: $black-color
-	line-height: 22px
-
-
-a
-	text-decoration: none
-	color: $red-color
-
-	&:hover
-		text-decoration: underline
-		color: $red-color
-		-webkit-transition: 0.25s
-		-moz-transition: 0.25s
-		-o-transition: 0.25s
-		transition: 0.25s
+  font-family: $roboto-slab
+  font-size: 14px
+  line-height: 22px
+  font-weight: 200
+  color: $dark-gray-color
+  padding-bottom: 15px
 .wrapper
-	width: 100%
-
-.no-margin
-	margin: 0 !important
-
-.no-padding
-	padding: 0 !important
+  width: 100%
+  &.outer
+    padding: 60px 30px 30px 30px
+    display: inline-block
+    float: left
 
 .align-center
-	text-align: center
+  text-align: center
 
 .align-right
-	text-align: right
+  text-align: right
+ul
+  &.blocks
+    list-style-type: none
+    padding: 0
+    margin: 0
+    float: left
 
-.social-logo
-	width: 20px
-	height: 20px
-	background-size: 20px
-	background-position: center
-	display: inline-block
-	opacity: 0.5
-	filter: alpha(opacity="50")
-
-	&.behance
-		background-image: url('../img/svg/social-black-be.svg')
-	&.facebook
-		background-image: url('../img/svg/social-black-fb.svg')
-	&.github
-		background-image: url('../img/svg/social-black-github.svg')
-	&.linkedin
-		background-image: url('../img/svg/social-white-linkedin.svg')
-	&:hover
-		opacity: 1
-		filter: alpha(opacity="100")
-		-webkit-transition: opacity 0.5s, -webkit-transform 0.5s
-		transition: opacity 0.5s, transform 0.5s
-
-//Colors
+//Background colors
 
 .bg-white
-	background: white
-
+  background: white
 .bg-yellow
-	background: #fbe35d
-
+  background: $yellow-color
 .bg-gray
-	background: #b9b6b8
-
+  background: $gray-color
 .bg-blue
-	background: #8DD3E6
-
+  background: $blue-color
 .bg-red
-	background: #ff7171
-
+  background: $red-color
+.bg-orange
+  background: $orange-color
+//Text colors
 .text-white
-	color: white
-
-//margins
-
-.margin
-	margin: 20px
-
-.margin-top
-	margin-top: 20px
-
-.margin-right
-	margin-right: 20px
-
-.margin-bottom
-	margin-bottom: 20px
-
-.margin-left
-	margin-left: 20px
-
-.margin-5
-	margin: 5px
-
-.margin-top-5
-	margin-top: 5px
-
-.margin-right-5
-	margin-right: 5px
-
-.margin-bottom-5
-	margin-bottom: 5px
-
-.margin-left-5
-	margin-left: 5px
-
-.margin-40
-	margin: 40px
-
-.margin-top-40
-	margin-top: 40px
-
-.margin-right-40
-	margin-right: 40px
-
-.margin-bottom-40
-	margin-bottom: 40px
-
-.margin-left-40
-	margin-left: 40px
-
-//Paddings
-
-.padding
-	padding: 20px
-
-.padding-top
-	padding-top: 20px
-
-.padding-right
-	padding-right: 20px
-
-.padding-bottom
-	padding-bottom: 20px
-
-.padding-left
-	padding-left: 20px
-
-
-.padding-40
-	padding: 40px
-
-.padding-top-40
-	padding-top: 40px
-
-.padding-right-40
-	padding-right: 40px
-
-.padding-bottom-40
-	padding-bottom: 40px
-
-.padding-left-40
-	padding-left: 40px
+  color: white
 
 //Navigation
-
 nav
-	height: 40px
-	width: auto
-	position: fixed
-	left: 0
-	top: 0
-	z-index: 999
+  &.social
+    height: 30px
+    width: auto
+    position: fixed
+    right: 90px
+    top: 0
+    ul
+      li
+        display: inline-block
+        float: left
+        a
+          height: 30px
+          width: 30px
+          text-align: center
+          display: inline-block
+          float: left
+          padding: 5px 10px
+          line-height: 20px
+          text-transform: uppercase
+          background-color: $dark-gray-color
+          color: white
+          font-size: 18px
+          text-decoration: none
 
-	#menu-button
-		height: 40px
-		width: 40px
-		background-color: white
-		cursor: pointer
-		display: inline-block
-	
-	#contact-dropdown
-		position: fixed
-		left: 60px
-		top: 60px
-		width: 0
-		height: 0
-		padding: 0
-		color: $black-color
-		line-height: 20px
-		font-size: 16px
-		background: rgba(255,255,255,0.9)
-		-webkit-transition: opacity 0.5s, -webkit-transform 0.5s
-		transition: opacity 0.5s, transform 0.5s
-
-		p
-			width: 200px
-
+  &.main
+    position: absolute
+    width: 100%
+    height: 30px
+    left: 0
+    top: 15px
+    ul
+      text-align: center
+      width: 100%
+      li
+        height: 30px
+        display: inline-block
+        float: none
+        margin: 0 30px
+        a
+          text-decoration: none
+          text-transform: uppercase
+          font-size: 14px
+          line-height: 30px
+          font-weight: 300
+          color: $black-color
+// Header
+header
+  display: inline-block
+  width: 100%
+  height: 60px
+  float: left
+  position: fixed
+  left: 0
+  top: 0
+  background-color: rgba(255,255,255,0.9)
+  z-index: 99
+  .logo
+    position: relative
+    margin-left: 90px
+    height: 60px
+    width: 60px
+    display: inline-block
+    float: left
+    background-color: $dark-gray-color
+    padding: 15px 0
+    h1
+      color: #ffffff
+      font-size: 12px
+      line-height: 30px
+      text-align: center
+      text-transform: uppercase
+      letter-spacing: 5px
+      font-family: $intro
+      margin: 0
+// Content
+section
+  .block
+    width: 100%
+    float: left
+    display: inline-block
+    position: relative
+    margin-bottom: 30px
+    > h2
+      position: absolute
+      left: 15px
+      top: 15px
+      font-size: 36px
+      line-height: 40px
+      font-family: $roboto-slab
+      span
+        width: auto
+        position: relative
+        clear: both
+        display: block
+    &.square
+      padding: 100% 0 0 0
+    &:hover
+      > .item-image
+        width: 100%
+        transition: width ease-in-out 200ms
+      > .item-content
+        background-color: rgba(255,255,255,0.5)
+        transition: background ease-in-out 200ms
+  .item-image
+    display: inline-block
+    position: absolute
+    left: 0
+    top: 0
+    height: 100%
+    width: 33.333%
+    background-position: center
+    background-size: cover
+    transition: width ease-out 200ms
+    &.audio
+      background-image: url('../images/new/audio.jpg')
+    &.bike
+      background-image: url('../images/new/bike.jpg')
+    &.graphic
+      background-image: url('../images/new/painting.jpg')
+    &.amps
+      background-image: url('../images/amps.jpg')
+  .item-content
+    display: inline-block
+    position: absolute
+    right: 0
+    bottom: 0
+    height: auto
+    width: 66.6667%
+    padding: 15px
+    transition: background ease-out 200ms
+    background-color: rgba(255,255,255,0)
+// Buttons
+.btn
+  display: inline-block
+  width: auto
+  padding: 10px 30px
+  height: 40px
+  line-height: 18px
+  font-size: 16px
+  border: 1px solid $dark-gray-color
+  color: $dark-gray-color
+  text-transform: uppercase
+  font-family: $main-type-font
+  border-radius: 0
+  font-weight: 300
 // ------ RESPONSIVE -------
-
-@media (max-width:767px)
-
-	.item-wrapper.col-xs-12
-		
-		.item-image,
-		.item-intro
-			padding: 50% 0 0 0
-
-	.site-intro
-		padding: 50% 0 0 0 !important
-
-@media (min-width:768px)
-	
-	.item-wrapper.col-sm-6
-
-		.item-image,
-		.item-intro
-			padding: 50% 0 0 0
-
-	h2
-		font-size: 30px
-
-	h3
-		font-size: 18px
-	p
-		font-size: 14px
-
-	.site-intro
-		padding: 35% 0 0 0 !important
-
-@media (min-width:992px)
-
-	.site-intro
-		padding: 33.33% 0 0 0 !important
-
-	.item-wrapper
-
-		&.small
-
-			.item-image,
-			.item-intro
-				width: 100%
-				padding: 100% 0 0
-				display: block
-		&.big
-
-			.item-image
-				width: 100%
-				padding: 50% 0 0
-				display: block
-
-@media (min-width:1170px)
-
-	h3
-		font-size: 22px
-	
-	h2
-		font-size: 40px
-
-	p
-		font-size: 16px
