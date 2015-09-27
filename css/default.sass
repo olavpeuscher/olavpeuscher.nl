@@ -19,6 +19,7 @@ h2
   color: $dark-gray-color
   text-transform: uppercase
   display: inline-block
+  font-weight: 200
 h3
   font-family: $main-type-font
   margin: 0 0 15px 0
@@ -29,21 +30,66 @@ h3
   display: inline-block
   font-weight: 200
   span
-    background-color: $dark-gray-color
+    position: relative
+    padding: 3px 5px 3px 0
     color: white
     line-height: 20px
-    padding: 3px 5px 3px 0
     display: inline-block
     float: left
+    &:before
+      content: ''
+      position: absolute
+      height: 20px
+      width: 100%
+      left: 0
+      bottom: 5px
+      background-color: $dark-gray-color
+      z-index: -1
     &:last-child
       padding: 3px 0
 p
   font-family: $roboto-slab
-  font-size: 14px
+  font-size: 13px
   line-height: 22px
   font-weight: 200
   color: $dark-gray-color
   padding-bottom: 15px
+  &.leading
+    font-size: 16px
+    line-height: 24px
+    a
+      color: #ffffff
+      &:before
+        background-color: $dark-gray-color
+      &:hover
+        &:before
+          background-color: $gray-color
+          transition: background ease-in-out 200ms
+  a
+    color: $dark-gray-color
+    text-decoration: none
+    position: relative
+    z-index: 2
+    transition: color ease-out 200ms
+    cursor: pointer
+    &:before
+      content: ''
+      position: absolute
+      width: 100%
+      left: 0
+      top: 0
+      height: 100%
+      background-color: $yellow-color
+      z-index: -1
+      transition: background ease-out 200ms
+    &:hover
+      text-decoration: none
+      &:hover
+        color: white
+        transition: color ease-in-out 200ms
+        &:before
+          background-color: $gray-color
+          transition: background ease-in-out 200ms
 .wrapper
   width: 100%
   &.outer
@@ -99,13 +145,20 @@ nav
           text-align: center
           display: inline-block
           float: left
-          padding: 5px 10px
+          padding: 5px 0
           line-height: 20px
           text-transform: uppercase
           background-color: $dark-gray-color
           color: white
           font-size: 18px
           text-decoration: none
+          transition: background ease-out 200ms
+          pointer: cursor
+        &:hover
+          a
+            background-color: $gray-color
+            transition: background ease-in-out 200ms
+
 
   &.main
     position: absolute
@@ -165,27 +218,21 @@ section
     display: inline-block
     position: relative
     margin-bottom: 30px
-    > h2
-      position: absolute
-      left: 15px
-      top: 15px
-      font-size: 36px
-      line-height: 40px
-      font-family: $roboto-slab
-      span
-        width: auto
-        position: relative
-        clear: both
-        display: block
     &.square
       padding: 100% 0 0 0
-    &:hover
-      > .item-image
-        width: 100%
-        transition: width ease-in-out 200ms
-      > .item-content
-        background-color: rgba(255,255,255,0.5)
-        transition: background ease-in-out 200ms
+    &.large
+      padding: calc(50% - 15px) 0 0 0
+      .item-image
+        width: calc(50% - 15px)
+      .item-content
+        width: calc(50% + 15px)
+    //&:hover
+      //> .item-image
+      //  width: 100%
+      //  transition: width ease-in-out 200ms
+      //> .item-content
+      //  background-color: rgba(255,255,255,0.5)
+      //  transition: background ease-in-out 200ms
   .item-image
     display: inline-block
     position: absolute
@@ -203,19 +250,41 @@ section
     &.graphic
       background-image: url('../images/new/painting.jpg')
     &.amps
-      background-image: url('../images/amps.jpg')
+      background-image: url('../images/new/amps.jpg')
+    &.bricks
+      background-image: url('../images/new/b4b.jpg')
+    &.driek
+      background-image: url('../images/new/driek.jpg')
+    &.amplissimo
+      background-image: url('../images/new/amplissimo.jpg')
+    &.center
+      background-image: url('../images/new/center.jpg')
   .item-content
     display: inline-block
     position: absolute
     right: 0
-    bottom: 0
+    top: 0
     height: auto
     width: 66.6667%
-    padding: 15px
+    padding: 0 15px
     transition: background ease-out 200ms
     background-color: rgba(255,255,255,0)
+    &.intro
+      padding: 15px
+      width: 100%
+      h2
+        position: relative
+        font-size: 36px
+        line-height: 40px
+        font-family: $roboto-slab
+        span
+          width: auto
+          position: relative
+          clear: both
+          display: block
 // Buttons
 .btn
+  position: relative
   display: inline-block
   width: auto
   padding: 10px 30px
@@ -228,4 +297,56 @@ section
   font-family: $main-type-font
   border-radius: 0
   font-weight: 300
+  overflow: hidden
+  cursor: pointer
+  transition: ease-out color 150ms
+  & > [class*="ion-"]
+    width: 20px
+    height: 20px
+    display: inline-block
+    margin-right: -10px
+    font-size: 18px
+    line-height: 20px
+    text-align: center
+  &:after,
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    opacity: 0
+    filter: alpha(opacity=0)
+    transition: ease-out all 150ms
+    z-index: -1
+  &:after
+    border-top: 38px solid $dark-gray-color
+    border-right: 100px solid transparent
+    border-left: 0px solid transparent
+    border-bottom: 0px solid transparent
+    transform: translateY(-40px)
+  &:before
+    border-bottom: 38px solid $dark-gray-color
+    border-left: 100px solid transparent
+    border-right: 0px solid transparent
+    border-top: 0px solid transparent
+    transform: translateY(40px)
+  &:hover
+    color: #ffffff
+    transition: ease-in-out color 150ms
+    &:before,
+    &:after
+      transform: translateY(0px)
+      opacity: 1
+      filter: alpha(opacity=100)
+      transition: ease-in-out all 150ms
+
+
 // ------ RESPONSIVE -------
+@media (max-width: 991px)
+  .block.large
+    padding: 100% 0 0 0 !important
+    .item-content
+      width: 66.666% !important
+    .item-image
+      width: 33.333% !important
