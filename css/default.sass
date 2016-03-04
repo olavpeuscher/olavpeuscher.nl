@@ -1,6 +1,11 @@
-@import includes
-@import ionicons
-@import fonts
+---
+# this ensures Jekyll reads the file to be transformed into CSS later
+# only Main files contain this front matter, not partials.
+---
+
+@import ../_sass/includes
+@import ../_sass/ionicons
+@import ../_sass/fonts
 
 body
   background-color: white
@@ -153,7 +158,7 @@ nav
           font-size: 18px
           text-decoration: none
           transition: background ease-out 200ms
-          pointer: cursor
+          cursor: pointer
         &:hover
           a
             background-color: $gray-color
@@ -226,62 +231,63 @@ section
         width: calc(50% - 15px)
       .item-content
         width: calc(50% + 15px)
-    //&:hover
-      //> .item-image
-      //  width: 100%
-      //  transition: width ease-in-out 200ms
-      //> .item-content
-      //  background-color: rgba(255,255,255,0.5)
-      //  transition: background ease-in-out 200ms
-  .item-image
-    display: inline-block
-    position: absolute
-    left: 0
-    top: 0
-    height: 100%
-    width: 33.333%
-    background-position: center
-    background-size: cover
-    transition: width ease-out 200ms
-    &.audio
-      background-image: url('../images/new/audio.jpg')
-    &.bike
-      background-image: url('../images/new/bike.jpg')
-    &.graphic
-      background-image: url('../images/new/painting.jpg')
-    &.amps
-      background-image: url('../images/new/amps.jpg')
-    &.bricks
-      background-image: url('../images/new/b4b.jpg')
-    &.driek
-      background-image: url('../images/new/driek.jpg')
-    &.amplissimo
-      background-image: url('../images/new/amplissimo.jpg')
-    &.center
-      background-image: url('../images/new/center.jpg')
-  .item-content
-    display: inline-block
-    position: absolute
-    right: 0
-    top: 0
-    height: auto
-    width: 66.6667%
-    padding: 0 15px
-    transition: background ease-out 200ms
-    background-color: rgba(255,255,255,0)
-    &.intro
-      padding: 15px
-      width: 100%
-      h2
-        position: relative
-        font-size: 36px
-        line-height: 40px
-        font-family: $roboto-slab
-        span
-          width: auto
+    .item-image
+      display: inline-block
+      position: absolute
+      left: 0
+      top: 0
+      height: 100%
+      width: 33.333%
+      background-position: center
+      background-size: cover
+      transition: width ease-out 200ms
+      &.audio
+        background-image: url('../images/new/audio.jpg')
+      &.bike
+        background-image: url('../images/new/bike.jpg')
+      &.graphic
+        background-image: url('../images/new/painting.jpg')
+      &.amps
+        background-image: url('../images/new/amps.jpg')
+      &.bricks
+        background-image: url('../images/new/b4b.jpg')
+      &.driek
+        background-image: url('../images/new/driek.jpg')
+      &.amplissimo
+        background-image: url('../images/new/amplissimo.jpg')
+      &.center
+        background-image: url('../images/new/center.jpg')
+    .item-content
+      display: inline-block
+      position: absolute
+      right: 0
+      top: 0
+      height: auto
+      width: 66.6667%
+      padding: 0 15px
+      transition: background ease-out 200ms
+      background-color: rgba(255,255,255,0)
+      z-index: 9
+      &.intro
+        padding: 15px
+        width: 100%
+        h2
           position: relative
-          clear: both
-          display: block
+          font-size: 36px
+          line-height: 40px
+          font-family: $roboto-slab
+          span
+            width: auto
+            position: relative
+            clear: both
+            display: block
+    //&:hover
+    //  .item-image
+    //    width: 100%
+    //    transition: width ease-in 200ms
+    //  .item-content
+    //    background-color: rgba(255,255,255,0.5)
+    //    transition: background ease-in 200ms
 // Buttons
 .btn
   position: relative

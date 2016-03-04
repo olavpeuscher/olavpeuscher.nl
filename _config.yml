@@ -1,3 +1,6 @@
 name: Olav Peuscher Portfolio
-gems: [jekyll-sass]
 markdown: redcarpet
+exclude: [Vagrantfile, README.md, LICENSE]
+sass:
+    sass_dir: _sass
+    style: compressed
