@@ -11,9 +11,12 @@ body
   background-color: white
   margin: 0
   width: 100%
-  padding: 100px 0 0 0
+  padding: 0
   font-family: $main-type-font
-
+h1
+  color: white
+  font-size: 48px
+  font-weight: 300
 h2
   font-family: $roboto-slab
   margin: 0 0 15px 0
@@ -26,6 +29,7 @@ h2
   display: inline-block
   font-weight: 200
   width: 100%
+
 h3
   font-family: $main-type-font
   margin: 0 0 15px 0
@@ -53,6 +57,7 @@ h3
       z-index: -1
     &:last-child
       padding: 3px 0
+
 p
   font-family: $roboto-slab
   font-size: 13px
@@ -96,11 +101,35 @@ p
         &:before
           background-color: $gray-color
           transition: background ease-in-out 200ms
+
+header
+  display: table
+  float: right
+  width: calc(100% - 180px)
+  height: 80vh
+  background-image: url('/images/rhodes-2.jpg')
+  background-size: cover
+  background-repeat: no-repeat
+  div
+    display: table-cell
+    vertical-align: middle
+    width: 100%
+    h1
+      line-height: 40px
+      text-align: center
+      width: 100%
+      color: white
+section
+  width: calc(100% - 180px)
+  display: inline-block
+  min-height: 400px
+  &.first
+    background-color: $gray-color
+
 .site-wrapper
   width: 100%
   display: inline-block
   float: left
-  padding-left: 90px
   nav
     position: fixed
     left: 0
@@ -110,33 +139,35 @@ p
     border-right: 1px solid $light-gray-color
     #menu-trigger
       position: absolute
+      cursor: pointer
       top: 60px
       right: -30px
       height: 60px
       width: 60px
       background-color: $dark-gray-color
       border-radius: 0
+      z-index: 999
       transform-origin: center center
       -webkit-transform-origin: center center
       -moz-transform-origin: center center
-      transition: all ease-out 150ms
-      -webkit-transition: all ease-out 150ms
-      -moz-transition: all ease-out 150ms
+      transition: all ease-out 250ms
+      -webkit-transition: all ease-out 250ms
+      -moz-transition: all ease-out 250ms
       &:before,
       &:after,
       span
-        width: 30px
+        width: 20px
         height: 1px
         background-color: white
         display: block
         position: absolute
-        right: 15px
+        left: 20px
         transform-origin: center center
         -webkit-transform-origin: center center
         -moz-transform-origin: center center
-        transition: all ease-out 150ms
-        -webkit-transition: all ease-out 150ms
-        -moz-transition: all ease-out 150ms
+        transition: all ease-out 250ms
+        -webkit-transition: all ease-out 250ms
+        -moz-transition: all ease-out 250ms
       span
         top: 30px
       &:before,
@@ -146,9 +177,9 @@ p
         -webkit-transform: rotate(0deg)
         -moz-transform: rotate(0deg)
       &:before
-        top: 23px
+        top: 24px
       &:after
-        top: 37px
+        top: 36px
       &.open
         border-radius: 30px
         transform: rotate(135deg)
@@ -158,30 +189,111 @@ p
         -webkit-transition: all ease-in 150ms
         -moz-transition: all ease-in 150ms
         &:before
-          transform: translateY(7px) rotate(0deg)
-          -webkit-transform: translateY(7px) rotate(0deg)
-          -moz-transform: translateY(7px) rotate(0deg)
+          transform: translateY(6px) rotate(0deg)
+          -webkit-transform: translateY(6px) rotate(0deg)
+          -moz-transform: translateY(6px) rotate(0deg)
           transition: all ease-in 150ms
           -webkit-transition: all ease-in 150ms
           -moz-transition: all ease-in 150ms
         &:after
-          transform: translateY(-7px) rotate(-90deg)
-          -webkit-transform: translateY(-7px) rotate(-90deg)
-          -moz-transform: translateY(-7px) rotate(-90deg)
+          transform: translateY(-6px) rotate(-90deg)
+          -webkit-transform: translateY(-6px) rotate(-90deg)
+          -moz-transform: translateY(-6px) rotate(-90deg)
           transition: all ease-in 150ms
           -webkit-transition: all ease-in 150ms
           -moz-transition: all ease-in 150ms
         span
           opacity: 0
-
-  .intro
-    min-height: 900px
-    background-color: $dark-gray-color
-    padding: 90px 30px 30px 30px
-    h1
-      margin: 0 0 0 calc(-25% - 30px)
-      color: $gray-color
-
-
-.align-center
-  text-align: center
+    ul
+      list-style-type: none
+      padding: 0
+      margin: 0
+      position: absolute
+      left: 70px
+      top: 130px
+      display: inline-block
+      width: 200px
+      z-index: -1
+      li
+        display: inline-block
+        position: relative
+        width: 100%
+        margin: 5px 0
+        transition: transform ease-out 250ms
+        transition-delay: 100ms
+        a
+          padding: 10px 0 10px 50px
+          line-height: 20px
+          font-size: 12px
+          text-transform: uppercase
+          font-weight: 300
+          position: relative
+          display: inline-block
+          float: left
+          width: 100%
+          opacity: 0
+          transform-origin: 0 50%
+          transition: opacity ease-out 250ms
+          color: $dark-gray-color
+          cursor: pointer
+          &:before
+            height: 40px
+            width: 40px
+            line-height: 40px
+            text-align: center
+            border-radius: 20px
+            background: $dark-gray-color
+            position: absolute
+            font-size: 18px
+            color: white
+            left: 0
+            top: 0
+            transform: scale(0)
+            transition: transform ease-out 250ms
+            transform-origin: center center
+        &:nth-child(1)
+          transform: translateY(-65px)
+          a,
+          a:before
+            transition-delay: 200ms
+        &:nth-child(2)
+          transform: translateY(-120px)
+          a,
+          a:before
+            transition-delay: 150ms
+        &:nth-child(3)
+          transform: translateY(-175px)
+          a,
+          a:before
+            transition-delay: 100ms
+        &:nth-child(4)
+          transform: translateY(-230px)
+          a,
+          a:before
+            transition-delay: 50ms
+    &.menu-open
+      li
+        transform: translateY(0) !important
+        transition: transform ease-out 250ms
+        a
+          opacity: 1
+          transition: opacity ease-out 250ms
+          &:before
+            transform: scale(1)
+            transition: transform ease-out 250ms
+        &:nth-child(1)
+          a,
+          a:before
+            transition-delay: 50ms
+        &:nth-child(2)
+          a,
+          a:before
+            transition-delay: 100ms
+        &:nth-child(3)
+          a,
+          a:before
+            transition-delay: 150ms
+        &:nth-child(4)
+          a,
+          a:before
+            transition-delay: 200ms
