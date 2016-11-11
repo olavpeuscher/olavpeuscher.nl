@@ -6,20 +6,12 @@ $(window).scroll(function () {
         $('li.current').removeClass('current');
     }
 
-    if ($(this).scrollTop() < 150) {
-        $('nav').removeClass('scroll');
-        $('section.ep').removeClass('fade-in').addClass('fade-out');
-        $('header').removeClass('scroll');
-    }else {
-        $('nav').addClass('scroll');
-        $('header').addClass('scroll');
-        $('section.ep').addClass('fade-in').removeClass('fade-out');
-    }
+    var headerHeight = $(this).height() * 0.8 - 120;
 
-    if ($(this).scrollTop() < 500) {
-        $('nav').removeClass('bg');
+    if ($(this).scrollTop() < headerHeight) {
+        $('nav').removeClass('scrolled');
     }else {
-        $('nav').addClass('bg');
+        $('nav').addClass('scrolled');
     }
 });
 
@@ -40,12 +32,12 @@ $(document).ready(function()
      * Minimized menu trigger on mobile
      **/
     $('#menu-trigger').bind('click', function(){
-        $('nav').toggleClass('menu-open');
+        $('nav.menu').toggleClass('menu-open');
         $(this).toggleClass('open');
     });
 
     $('nav a').bind('click', function(){
-        $('nav').removeClass('menu-open');
+        $('nav.menu').removeClass('menu-open');
         $('#menu-trigger').removeClass('open');
     });
 

@@ -11,14 +11,25 @@ body
   background-color: white
   margin: 0
   width: 100%
-  padding: 0
+  padding: 30px
   font-family: $main-type-font
 h1
   color: white
-  font-size: 48px
-  font-weight: 300
+  font-size: 72px
+  font-weight: 100
+  line-height: 60px
+  position: relative
+  margin: 0
+  &:after
+    content: ''
+    height: 1px
+    width: 200px
+    background-color: $red-color
+    position: absolute
+    left: calc(50% - 100px)
+    bottom: -40px
 h2
-  font-family: $roboto-slab
+  font-family: $serif-type-font
   margin: 0 0 15px 0
   padding: 0
   min-height: 30px
@@ -59,7 +70,7 @@ h3
       padding: 3px 0
 
 p
-  font-family: $roboto-slab
+  font-family: $serif-type-font
   font-size: 13px
   line-height: 22px
   font-weight: 200
@@ -105,38 +116,170 @@ p
 header
   display: table
   float: right
-  width: calc(100% - 180px)
+  width: 100%
   height: 80vh
-  background-image: url('/images/rhodes-2.jpg')
+  background-image: url('/images/rhodes.jpg')
   background-size: cover
   background-repeat: no-repeat
+  position: relative
+  &:after
+    content: ''
+    left: 60px
+    bottom: 0
+    height: 90px
+    width: 1px
+    position: absolute
+    background-color: $red-color
+
   div
     display: table-cell
     vertical-align: middle
     width: 100%
     h1
-      line-height: 40px
+      line-height: 60px
       text-align: center
       width: 100%
       color: white
+    h2
+      color: $red-color
+      line-height: 30px
+      text-transform: uppercase
+      text-align: center
+      width: 100%
+      font-size: 18px
 section
-  width: calc(100% - 180px)
-  display: inline-block
-  min-height: 400px
-  &.first
-    background-color: $gray-color
-
-.site-wrapper
   width: 100%
   display: inline-block
+  min-height: 400px
   float: left
-  nav
-    position: fixed
-    left: 0
+  position: relative
+  &:before
+    content: ''
+    width: 1px
     top: 0
+    left: 60px
+    position: absolute
+    height: 100%
+    background-color: $light-gray-color
+nav
+  z-index: 9999
+  position: fixed
+  left: 0
+  top: 0
+  &.social
+    width: 100%
+    height: 30px
+    background-color: white
+    ul
+      list-style-type: none
+      padding: 0
+      margin: 0 60px 0 0
+      float: right
+      li
+        padding: 0
+        display: inline-block
+        float: left
+        margin: 0
+        a
+          height: 30px
+          width: 30px
+          display: inline-block
+          line-height: 20px
+          font-size: 20px
+          padding: 5px 0
+          text-align: center
+          color: $gray-color
+          text-decoration: none
+          transition: color ease-out 250ms
+          &:hover
+            color: $red-color
+            transition: color ease-out 250ms
+  &.menu
     width: 90px
     height: 100%
-    border-right: 1px solid $light-gray-color
+    &.scrolled
+      #menu-trigger
+        background-color: $dark-gray-color
+        &:before,
+        &:after,
+        span
+          background-color: white
+      ul
+        li
+          a
+            color: $dark-gray-color
+            &:before
+              color: white
+              background-color: $dark-gray-color
+              transition: color ease-out 250ms, background ease-out 250ms
+    ul
+      list-style-type: none
+      padding: 0
+      margin: 0
+      position: absolute
+      left: 70px
+      top: 130px
+      display: inline-block
+      width: 200px
+      z-index: -1
+      li
+        display: inline-block
+        position: relative
+        width: 100%
+        margin: 5px 0
+        transition: transform ease-out 250ms
+        transition-delay: 100ms
+        a
+          padding: 10px 0 10px 50px
+          line-height: 20px
+          font-size: 12px
+          text-transform: uppercase
+          font-weight: 300
+          position: relative
+          display: inline-block
+          float: left
+          width: 100%
+          opacity: 0
+          transform-origin: 0 50%
+          transition: opacity ease-out 250ms
+          color: white
+          cursor: pointer
+          &:before
+            height: 40px
+            width: 40px
+            line-height: 20px
+            padding: 10px 0
+            text-align: center
+            border-radius: 20px
+            background: white
+            position: absolute
+            font-size: 18px
+            color: $dark-gray-color
+            left: 0
+            top: 0
+            transform: scale(0)
+            transition: transform ease-out 250ms, color ease-out 250ms, background ease-out 250ms
+            transform-origin: center center
+        &:nth-child(1)
+          transform: translateY(-65px)
+          a,
+          a:before
+            transition-delay: 200ms
+        &:nth-child(2)
+          transform: translateY(-120px)
+          a,
+          a:before
+            transition-delay: 150ms
+        &:nth-child(3)
+          transform: translateY(-175px)
+          a,
+          a:before
+            transition-delay: 100ms
+        &:nth-child(4)
+          transform: translateY(-230px)
+          a,
+          a:before
+            transition-delay: 50ms
     #menu-trigger
       position: absolute
       cursor: pointer
@@ -144,8 +287,8 @@ section
       right: -30px
       height: 60px
       width: 60px
-      background-color: $dark-gray-color
-      border-radius: 0
+      background-color: white
+      border-radius: 1px
       z-index: 999
       transform-origin: center center
       -webkit-transform-origin: center center
@@ -158,7 +301,7 @@ section
       span
         width: 20px
         height: 1px
-        background-color: white
+        background-color: $dark-gray-color
         display: block
         position: absolute
         left: 20px
@@ -204,73 +347,6 @@ section
           -moz-transition: all ease-in 150ms
         span
           opacity: 0
-    ul
-      list-style-type: none
-      padding: 0
-      margin: 0
-      position: absolute
-      left: 70px
-      top: 130px
-      display: inline-block
-      width: 200px
-      z-index: -1
-      li
-        display: inline-block
-        position: relative
-        width: 100%
-        margin: 5px 0
-        transition: transform ease-out 250ms
-        transition-delay: 100ms
-        a
-          padding: 10px 0 10px 50px
-          line-height: 20px
-          font-size: 12px
-          text-transform: uppercase
-          font-weight: 300
-          position: relative
-          display: inline-block
-          float: left
-          width: 100%
-          opacity: 0
-          transform-origin: 0 50%
-          transition: opacity ease-out 250ms
-          color: $dark-gray-color
-          cursor: pointer
-          &:before
-            height: 40px
-            width: 40px
-            line-height: 40px
-            text-align: center
-            border-radius: 20px
-            background: $dark-gray-color
-            position: absolute
-            font-size: 18px
-            color: white
-            left: 0
-            top: 0
-            transform: scale(0)
-            transition: transform ease-out 250ms
-            transform-origin: center center
-        &:nth-child(1)
-          transform: translateY(-65px)
-          a,
-          a:before
-            transition-delay: 200ms
-        &:nth-child(2)
-          transform: translateY(-120px)
-          a,
-          a:before
-            transition-delay: 150ms
-        &:nth-child(3)
-          transform: translateY(-175px)
-          a,
-          a:before
-            transition-delay: 100ms
-        &:nth-child(4)
-          transform: translateY(-230px)
-          a,
-          a:before
-            transition-delay: 50ms
     &.menu-open
       li
         transform: translateY(0) !important
