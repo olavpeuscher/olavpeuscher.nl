@@ -15,67 +15,58 @@ body
   font-family: $main-type-font
 h1
   color: white
-  font-size: 72px
+  font-size: 60px
   font-weight: 100
   line-height: 60px
   position: relative
   margin: 0
-  &:after
-    content: ''
-    height: 1px
-    width: 200px
-    background-color: $red-color
-    position: absolute
-    left: calc(50% - 100px)
-    bottom: -40px
 h2
-  font-family: $serif-type-font
-  margin: 0 0 15px 0
+  margin: 0 0 30px 0
   padding: 0
-  min-height: 30px
   line-height: 30px
   font-size: 28px
   color: $dark-gray-color
   text-transform: uppercase
   display: inline-block
-  font-weight: 200
+  font-weight: 300
+  letter-spacing: 2px
   width: 100%
-
 h3
-  font-family: $main-type-font
-  margin: 0 0 15px 0
-  min-height: 20px
-  line-height: 20px
-  font-size: 18px
-  text-transform: uppercase
-  display: inline-block
-  font-weight: 200
-  span
-    position: relative
-    padding: 3px 5px 3px 0
-    color: white
-    line-height: 20px
-    display: inline-block
-    float: left
-    &:before
-      content: ''
-      position: absolute
-      height: 20px
-      width: 100%
-      left: 0
-      bottom: 5px
-      background-color: $dark-gray-color
-      z-index: -1
-    &:last-child
-      padding: 3px 0
+
 
 p
   font-family: $serif-type-font
   font-size: 13px
-  line-height: 22px
+  line-height: 20px
   font-weight: 200
   color: $dark-gray-color
   padding-bottom: 15px
+  a
+    color: white
+    text-decoration: none
+    position: relative
+    z-index: 2
+    transition: color ease-out 200ms
+    cursor: pointer
+    padding: 3px 5px
+    &:before
+      content: ''
+      position: absolute
+      width: 100%
+      left: 0
+      top: 0
+      height: 100%
+      background-color: $dark-gray-color
+      z-index: -1
+      transition: background ease-out 200ms
+    &:hover
+      text-decoration: none
+      &:hover
+        color: white
+        transition: color ease-in-out 200ms
+        &:before
+          background-color: $gray-color
+          transition: background ease-in-out 200ms
   &.leading
     font-size: 16px
     line-height: 24px
@@ -87,31 +78,30 @@ p
         &:before
           background-color: $gray-color
           transition: background ease-in-out 200ms
-  a
-    color: $dark-gray-color
-    text-decoration: none
-    position: relative
-    z-index: 2
-    transition: color ease-out 200ms
-    cursor: pointer
-    &:before
-      content: ''
-      position: absolute
-      width: 100%
-      left: 0
-      top: 0
-      height: 100%
-      background-color: $yellow-color
-      z-index: -1
-      transition: background ease-out 200ms
-    &:hover
-      text-decoration: none
-      &:hover
-        color: white
-        transition: color ease-in-out 200ms
-        &:before
-          background-color: $gray-color
-          transition: background ease-in-out 200ms
+  &.intro
+    font-family: $main-type-font
+    margin: 0 0 15px 0
+    min-height: 20px
+    text-transform: uppercase
+    font-weight: 200
+    span
+      position: relative
+      padding: 3px 5px 3px 0
+      color: white
+      line-height: 20px
+      display: inline-block
+      float: left
+      &:before
+        content: ''
+        position: absolute
+        height: 20px
+        width: 100%
+        left: 0
+        bottom: 5px
+        background-color: $dark-gray-color
+        z-index: -1
+      &:last-child
+        padding: 3px 0
 
 header
   display: table
@@ -121,38 +111,54 @@ header
   background-image: url('/images/rhodes.jpg')
   background-size: cover
   background-repeat: no-repeat
+  background-attachment: fixed
   position: relative
   &:after
     content: ''
     left: 60px
     bottom: 0
-    height: 90px
+    height: 60px
     width: 1px
     position: absolute
     background-color: $red-color
-
-  div
+  .btn-scroll
+    position: absolute
+    left: calc(50% - 40px)
+    bottom: 120px
+  div:not(.btn-scroll)
     display: table-cell
     vertical-align: middle
     width: 100%
-    h1
-      line-height: 60px
-      text-align: center
+    h1, h2
+      text-shadow: 0 0 15px rgba(0,0,0,0.15)
       width: 100%
       color: white
+    h1
+      line-height: 60px
+      padding-bottom: 45px
+      margin-bottom: 45px
+      &:after
+        content: ''
+        height: 1px
+        width: 60px
+        background-color: $red-color
+        position: absolute
+        left: calc(50% - 30px)
+        bottom: 0
     h2
-      color: $red-color
-      line-height: 30px
+      line-height: 20px
       text-transform: uppercase
-      text-align: center
-      width: 100%
       font-size: 18px
+      span
+        margin: 0 5px
 section
   width: 100%
   display: inline-block
   min-height: 400px
+  padding: 90px 90px 0 90px
   float: left
   position: relative
+
   &:before
     content: ''
     width: 1px
@@ -161,6 +167,77 @@ section
     position: absolute
     height: 100%
     background-color: $light-gray-color
+  h2
+    width: 100%
+    position: relative
+    padding-bottom: 30px
+    &:after,
+    &:before
+      content: ''
+      height: 1px
+      position: absolute
+      bottom: 0
+    &:after
+      background-color: $red-color
+      width: 30px
+      left: calc(50% - 15px)
+    &:before
+      background-color: $light-gray-color
+      width: calc(50% + 30px)
+      left: -30px
+  article
+    h3
+      width: 100%
+      color: $dark-gray-color
+      font-size: 12px
+      margin-bottom: 60px
+    .content
+      display: inline-block
+      float: left
+      width: 100%
+      &.portfolio
+        padding: 30px 37.5px 0 37.5px
+        .item
+          margin: 0 0 10px 0
+          position: relative
+          width: 100%
+          padding: 100% 0 0 0
+          overflow: hidden
+          background-color: $dark-gray-color
+          .image
+            position: absolute
+            background-position: center
+            background-size: cover
+            background-repeat: no-repeat
+            width: 100%
+            height: 100%
+            left: 0
+            top: 0
+            transform-origin: 0 0
+            transition: transform ease-out 250ms, opacity ease-out 250ms
+          .body
+            width: 75%
+            height: 75%
+            position: absolute
+            right: 0
+            bottom: 0
+            background-color: $yellow-color
+            transform: scale(0)
+            transform-origin: 100% 100%
+            transition: transform ease-out 250ms
+            transition-delay: 125ms
+            padding: 30px
+
+          &:hover
+            .image
+              opacity: 0.5
+              transform: scale(1.25)
+              transition: transform ease-out 250ms, opacity ease-out 250ms
+            .body
+              transform: scale(1)
+              transition: transform ease-out 250ms
+              transition-delay: 125ms
+
 nav
   z-index: 9999
   position: fixed
@@ -197,6 +274,10 @@ nav
   &.menu
     width: 90px
     height: 100%
+    transition: transform ease-out 250ms
+    &.top
+      transform: translateY(-30px)
+      transition: transform ease-out 250ms
     &.scrolled
       #menu-trigger
         background-color: $dark-gray-color
@@ -288,7 +369,6 @@ nav
       height: 60px
       width: 60px
       background-color: white
-      border-radius: 1px
       z-index: 999
       transform-origin: center center
       -webkit-transform-origin: center center
@@ -373,3 +453,77 @@ nav
           a,
           a:before
             transition-delay: 200ms
+/*
+ * Fancy scroll button
+ */
+.btn-scroll
+  width: 80px
+  cursor: pointer
+  height: 40px
+  display: block
+  transform: translateY(0)
+  -webkit-transform: translateY(0)
+  -moz-transform: translateY(0)
+  transition: ease-in-out 250ms
+  -webkit-transition: ease-in-out 250ms
+  -moz-transition: ease-in-out 250ms
+  &:before,
+  &:after
+    content: ''
+    width: 1px
+    height: 40px
+    position: absolute
+    transform-origin: center 40px
+    -webkit-transform-origin: center 40px
+    -moz-transform-origin: center 40px
+    background-color: white
+    left: 50%
+    bottom: 0
+  &:before
+    transform: rotate(45deg)
+    -webkit-transform: rotate(45deg)
+    -moz-transform: rotate(45deg)
+    transition: ease-in-out 250ms
+    -webkit-transition: ease-in-out 250ms
+    -moz-transition: ease-in-out 250ms
+  &:after
+    transform: rotate(-45deg)
+    -webkit-transform: rotate(-45deg)
+    -moz-transform: rotate(-45deg)
+    transition: ease-in-out 250ms
+    -webkit-transition: ease-in-out 250ms
+    -moz-transition: ease-in-out 250ms
+
+  &:hover
+    transform: translateY(5px)
+    -webkit-transform: translateY(5px)
+    -moz-transform: translateY(5px)
+    transition: ease-in-out 250ms
+    -webkit-transition: ease-in-out 250ms
+    -moz-transition: ease-in-out 250ms
+    &:after
+      transform: rotate(-40deg)
+      -webkit-transform: rotate(-40deg)
+      -moz-transform: rotate(-40deg)
+      transition: ease-in-out 250ms
+      -webkit-transition: ease-in-out 250ms
+      -moz-transition: ease-in-out 250ms
+    &:before
+      transform: rotate(40deg)
+      -webkit-transform: rotate(40deg)
+      -moz-transform: rotate(40deg)
+      transition: ease-in-out 250ms
+      -webkit-transition: ease-in-out 250ms
+      -moz-transition: ease-in-out 250ms
+.portfolio
+  [class*="col-"],
+  [class^="col-"]
+    padding-left: 5px !important
+    padding-right: 5px !important
+  .row
+    margin-left: -5px
+    margin-right: -5px
+@media(min-width: 1px)
+  article
+    .portfolio
+      .item

@@ -6,12 +6,19 @@ $(window).scroll(function () {
         $('li.current').removeClass('current');
     }
 
-    var headerHeight = $(this).height() * 0.8 - 120;
+    var windowHeight = $(this).height();
+    var headerHeight = 0.8 * windowHeight;
 
-    if ($(this).scrollTop() < headerHeight) {
+    if ($(this).scrollTop() < headerHeight - 60) {
         $('nav').removeClass('scrolled');
     }else {
         $('nav').addClass('scrolled');
+    }
+
+    if ($(this).scrollTop() < headerHeight){
+        $('.menu').removeClass('top');
+    }else {
+        $('.menu').addClass('top');
     }
 });
 
