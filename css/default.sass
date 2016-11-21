@@ -32,8 +32,34 @@ h2
   letter-spacing: 2px
   width: 100%
 h3
-
-
+  font-family: $main-type-font
+  margin: 0 0 15px 0
+  min-height: 25px
+  line-height: 25px
+  font-size: 24px
+  text-transform: uppercase
+  display: inline-block
+  font-weight: 200
+  width: 100%
+  span
+    position: relative
+    padding: 0 5px 0 0
+    color: white
+    line-height: 25px
+    display: inline-block
+    float: left
+    margin: 0 0 1px 0
+    &:before
+      content: ''
+      position: absolute
+      height: 25px
+      width: 100%
+      left: 0
+      bottom: 0
+      background-color: $dark-gray-color
+      z-index: -1
+    &:last-child
+      padding: 0
 p
   font-family: $serif-type-font
   font-size: 13px
@@ -129,14 +155,15 @@ header
     display: table-cell
     vertical-align: middle
     width: 100%
-    h1, h2
-      text-shadow: 0 0 15px rgba(0,0,0,0.15)
-      width: 100%
-      color: white
     h1
-      line-height: 60px
-      padding-bottom: 45px
-      margin-bottom: 45px
+      line-height: 45px
+      margin-bottom: 90px
+      position: relative
+      padding: 0
+      color: $dark-gray-color
+      span
+        display: inline-block
+        background-color: white
       &:after
         content: ''
         height: 1px
@@ -144,11 +171,12 @@ header
         background-color: $red-color
         position: absolute
         left: calc(50% - 30px)
-        bottom: 0
+        bottom: -45px
     h2
       line-height: 20px
       text-transform: uppercase
       font-size: 18px
+      text-shadow: 0 0 15px rgba(0,0,0,0.15)
       span
         margin: 0 5px
 section
@@ -185,58 +213,65 @@ section
       background-color: $light-gray-color
       width: calc(50% + 30px)
       left: -30px
-  article
-    h3
-      width: 100%
-      color: $dark-gray-color
-      font-size: 12px
-      margin-bottom: 60px
-    .content
-      display: inline-block
-      float: left
-      width: 100%
-      &.portfolio
-        padding: 30px 37.5px 0 37.5px
-        .item
-          margin: 0 0 10px 0
-          position: relative
+  .intro
+    width: 100%
+    color: $dark-gray-color
+    font-size: 12px
+    margin-bottom: 60px
+  .content
+    display: inline-block
+    float: left
+    width: 100%
+    &.portfolio
+      padding: 30px 30px 0 30px
+      .item
+        margin: 0 0 10px 0
+        position: relative
+        width: 100%
+        padding: 100% 0 0 0
+        overflow: hidden
+        background-color: $dark-gray-color
+        .image
+          position: absolute
+          background-position: center
+          background-size: cover
+          background-repeat: no-repeat
           width: 100%
-          padding: 100% 0 0 0
-          overflow: hidden
-          background-color: $dark-gray-color
-          .image
-            position: absolute
-            background-position: center
-            background-size: cover
-            background-repeat: no-repeat
+          height: 100%
+          left: 0
+          top: 0
+          transform-origin: 0 0
+          transition: transform ease-out 250ms, opacity ease-out 250ms
+        .body
+          width: 75%
+          height: 75%
+          position: absolute
+          right: 0
+          bottom: 0
+          background-color: $yellow-color
+          transform: scale(0)
+          transform-origin: 100% 100%
+          transition: transform ease-out 375ms
+          transition-delay: 125ms
+          padding: 30px
+          opacity: 0.9
+          .body-content
             width: 100%
-            height: 100%
-            left: 0
-            top: 0
-            transform-origin: 0 0
+            opacity: 0
+            transition: opacity ease-out 250ms
+        &:hover
+          .image
+            opacity: 0.5
+            transform: scale(1.25)
             transition: transform ease-out 250ms, opacity ease-out 250ms
           .body
-            width: 75%
-            height: 75%
-            position: absolute
-            right: 0
-            bottom: 0
-            background-color: $yellow-color
-            transform: scale(0)
-            transform-origin: 100% 100%
+            transform: scale(1)
             transition: transform ease-out 250ms
             transition-delay: 125ms
-            padding: 30px
-
-          &:hover
-            .image
-              opacity: 0.5
-              transform: scale(1.25)
-              transition: transform ease-out 250ms, opacity ease-out 250ms
-            .body
-              transform: scale(1)
-              transition: transform ease-out 250ms
-              transition-delay: 125ms
+          .body-content
+            opacity: 1
+            transition: opacity ease-out 250ms
+            transition-delay: 375ms
 
 nav
   z-index: 9999
