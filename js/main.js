@@ -36,11 +36,17 @@ function scrollToAnchor(anchor, offset, time){
 $(document).ready(function()
 {
     /**
-     * Minimized menu trigger on mobile
+     * Menu trigger
      **/
     $('#menu-trigger').bind('click', function(){
+        $('nav.menu-open').addClass('menu-close');
+        setTimeout(function() {
+            $('nav').removeClass('menu-close');
+        },250);
+
         $('nav.menu').toggleClass('menu-open');
         $(this).toggleClass('open');
+
     });
 
     $('nav a').bind('click', function(){
@@ -48,12 +54,23 @@ $(document).ready(function()
         $('#menu-trigger').removeClass('open');
     });
 
+    /**
+     * POrtfolio items texts
+     **/
+    $('.item .image').bind('click', function(){
+        $(this).parent().addClass('open');
+    });
+
+    $('.item .close').bind('click', function(){
+        $(this).parent().removeClass('open');
+    });
+
     var hash = window.location.hash;
 
     $('.to-anchor').bind('click', function(){
         var anchor = $(this).attr('target-anchor');
 
-        scrollToAnchor(anchor, 180, 500);
+        scrollToAnchor(anchor, 150, 500);
 
         $(document).find('li.current').removeClass('current');
         $(this).closest('li').addClass('current');
@@ -63,7 +80,7 @@ $(document).ready(function()
         $(document).find('a.current').removeClass('current');
         $('.to-anchor[target-anchor="' + hash + '"]').addClass('current');
         setTimeout(function() {
-            scrollToAnchor(hash, 180, 500);
+            scrollToAnchor(hash, 150, 500);
         },50)
     }
 
