@@ -7,8 +7,8 @@ css: home.css
 
 <nav class="social">
     <ul>
-        <li><a class="ion-social-linkedin"></a></li>
-        <li><a class="ion-email"></a></li>
+        <li><a href="http://nl.linkedin.com/pub/olav-peuscher/50/72b/aa1" target="_blank" class="ion-social-linkedin"></a></li>
+        <!--<li><a class="ion-email"></a></li>-->
     </ul>
 </nav>
 <nav class="menu">
@@ -17,9 +17,8 @@ css: home.css
         <span></span>
     </div>
     <ul>
-        <li><a target-anchor="#portfolio" class="to-anchor ion-ios-photos-outline">Portfolio</a></li>
         <li><a target-anchor="#about" class="to-anchor ion-ios-person-outline">About me</a></li>
-        <li><a class="to-anchor ion-ios-briefcase-outline">Label305</a></li>
+        <li><a target-anchor="#portfolio" class="to-anchor ion-ios-photos-outline">Personal projects</a></li>
         <li><a target-anchor="#contact" class="to-anchor ion-ios-email-outline">Contact</a></li>
     </ul>
 </nav>
@@ -27,23 +26,41 @@ css: home.css
     <div>
         <h1 class="text-center"><span>I am Olav Peuscher</span></h1>
         <h2 class="text-center">
-            <span>Creator</span>
-            <span>Musician</span>
-            <span>Entrepreneur</span>
+           I create
         </h2>
     </div>
     <div target-anchor="#portfolio" class="btn-scroll to-anchor"></div>
 </header>
+<section id="about">
+    <h2 class="text-center">About me</h2>
+    <article>
+        <p class="intro text-center">A brief introduction</p>
+        <div class="content about">
+            <p>I am Olav Peuscher. I am a creator. I love to create both physical as digital
+                products. Within <a target="_blank" href="http://www.label305.com/en">Label305</a>, the company I
+                founded together with Joris Blaak, Xander Peuscher and Thijs Scheepers, we create digital products for clients. Translating
+                raw ideas to elegant digital products is what keeps me busy and challenges me.</p>
+            <p>Besides creating digital products, I love to work on physical products and electronics. As a hobby, I
+                build HiFi equipment for own purposes, work on bikes, musical instruments, and create several other
+                artifacts.
+            <p>Makin music has always been a passion for me. After playing in the cover band Tune Inn, I started with
+                Daan Wirtz, the band has been evolved into the recording collective <a target="_blank"
+                                                                                href="http://www.bricksforbreakfast.com">Bricks
+                    for breakfast</a>. Within this collective, I am one of the producers and, not least, I play the keys.
+            </p>
+        </div>
+    </article>
+</section>
 <section id="portfolio">
-    <h2 class="text-center">Projects</h2>
+    <h2 class="text-center">Personal projects</h2>
     <p class="intro text-center">A selection of personal work over the years.</p>
     <div class="content portfolio">
         <div class="row">
             <div class="col-xs-6 col-lg-4">
                 <article class="item">
-                    <div class="image" style="background-image: url('/images/new/audio.jpg')"></div>
-                    <div class="close"></div>
-                    <div class="close"></div>
+                    <div class="image-wrapper">
+                        <div class="image" style="background-image: url('/images/new/audio.jpg')"></div>
+                    </div>
                     <div class="body">
                         <div class="body-content">
                             <h3>
@@ -65,12 +82,15 @@ css: home.css
                             </p>
                         </div>
                     </div>
+                    <div class="close"></div>
                 </article>
             </div>
+
             <div class="col-xs-6 col-lg-4">
                 <article class="item">
-                    <div class="image" style="background-image: url('/images/new/painting.jpg')"></div>
-                    <div class="close"></div>
+                    <div class="image-wrapper">
+                        <div class="image" style="background-image: url('/images/new/painting.jpg')"></div>
+                    </div>
                     <div class="body">
                         <div class="body-content">
                             <h3>
@@ -85,13 +105,15 @@ css: home.css
                             </p>
                         </div>
                     </div>
+                    <div class="close"></div>
                 </article>
             </div>
 
             <div class="col-xs-6 col-lg-4">
                 <article class="item">
-                    <div class="image" style="background-image: url('/images/new/amps.jpg')"></div>
-                    <div class="close"></div>
+                    <div class="image-wrapper">
+                        <div class="image" style="background-image: url('/images/new/amps.jpg')"></div>
+                    </div>
                     <div class="body">
                         <div class="body-content">
                             <h3>
@@ -109,13 +131,57 @@ css: home.css
                             </p>
                         </div>
                     </div>
+                    <div class="close"></div>
                 </article>
             </div>
 
             <div class="col-xs-6 col-lg-4">
                 <article class="item">
-                    <div class="image" style="background-image: url('/images/new/center.jpg')"></div>
+                    <div class="image-wrapper">
+                        <div class="image" style="background-image: url('/images/new/bike.jpg')"></div>
+                    </div>
+                    <div class="body">
+                        <div class="body-content">
+                            <h3>
+                                <span>Fast </span><span>city </span><span>bike </span>
+                            </h3>
+                            <p>
+                                When my second hand Koga Miyata bike was looking bad after 12 years of use, I upgraded
+                                my old bike with new parts, nice wheels and a fresh paintjob.
+                            </p>
+                            <p>All unneeded mounting points were removed, creating a simple and minimalistic frame.</p>
+                        </div>
+                    </div>
                     <div class="close"></div>
+                </article>
+            </div>
+
+            <div class="col-xs-6 col-lg-4">
+                <article class="item">
+                    <div class="image-wrapper">
+                        <div class="image" style="background-image: url('/images/new/amplissimo.jpg')"></div>
+                    </div>
+                    <div class="body">
+                        <div class="body-content">
+                            <h3>
+                                <span>3-channel </span><span>gainclone </span><span>amplifier </span>
+                            </h3>
+                            <p>
+                                My first DIY amplifier. It is based on three LM3886 chips, a 500w toroidal transformer
+                                and a nicely build power supply. The amplifier features three channels of 65 watt
+                                each. I used it as one amplifier for powering the front- and center speakers.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="close"></div>
+                </article>
+            </div>
+
+            <div class="col-xs-6 col-lg-4">
+                <article class="item">
+                    <div class="image-wrapper">
+                        <div class="image" style="background-image: url('/images/new/center.jpg')"></div>
+                    </div>
                     <div class="body">
                         <div class="body-content">
                             <h3>
@@ -130,50 +196,39 @@ css: home.css
                                 drivers.</p>
                         </div>
                     </div>
-                </article>
-            </div>
-            <div class="col-xs-6 col-lg-4">
-                <article class="item">
-                    <div class="image" style="background-image: url('/images/new/bike.jpg')"></div>
                     <div class="close"></div>
-                    <div class="body">
-                        <div class="body-content">
-                            <h3>
-                                <span>Fast </span><span>city </span><span>bike </span>
-                            </h3>
-                            <p>
-                                When my second hand Koga Miyata bike was looking bad after 12 years of use, I upgraded
-                                my old bike with new parts, nice wheels and a fresh paintjob.
-                            </p>
-                            <p>All unneeded mounting points were removed, creating a simple and minimalistic frame.</p>
-                        </div>
-                    </div>
                 </article>
             </div>
 
             <div class="col-xs-6 col-lg-4">
                 <article class="item">
-                    <div class="image" style="background-image: url('/images/new/amplissimo.jpg')"></div>
-                    <div class="close"></div>
+                    <div class="image-wrapper">
+                        <div class="image" style="background-image: url('/images/3xt.jpg')"></div>
+                    </div>
                     <div class="body">
                         <div class="body-content">
                             <h3>
-                                <span>3-channel </span><span>gainclone </span><span>amplifier </span>
+                                <span>Expandable</span><span>HiFi </span><span>amplifier </span>
                             </h3>
                             <p>
-                                My first DIY amplifier. It is based on three LM3886 chips, a 500w toroidal transformer
-                                and a nicely build power supply. The amplifier features three channels of 65 watt
-                                each. I used it as one amplifier for powering the front- and center speakers.
+                                Expandable LM3886 based HiFi amplifier. The amplifier can be extended to 3 LM3886 ic's parallel per channel.
+
+                                The amlifier was awarded second place during the <a target="_blank"
+                                                                                 href="http://forum.zelfbouwaudio.nl/viewtopic.php?f=56&t=12823">amplifier of the year 2010</a> at forum.zelfbouwaudio.nl.
+
                             </p>
                         </div>
                     </div>
+                    <div class="close"></div>
                 </article>
             </div>
 
+
             <div class="col-xs-6 col-lg-4">
                 <article class="item">
-                    <div class="image" style="background-image: url('/images/sk20.jpg')"></div>
-                    <div class="close"></div>
+                    <div class="image-wrapper">
+                        <div class="image" style="background-image: url('/images/sk20.jpg')"></div>
+                    </div>
                     <div class="body">
                         <div class="body-content">
                             <h3>
@@ -187,13 +242,15 @@ css: home.css
                             </p>
                         </div>
                     </div>
+                    <div class="close"></div>
                 </article>
             </div>
 
             <div class="col-xs-6 col-lg-4">
                 <article class="item">
-                    <div class="image" style="background-image: url('/images/new/driek.jpg')"></div>
-                    <div class="close"></div>
+                    <div class="image-wrapper">
+                        <div class="image" style="background-image: url('/images/new/driek.jpg')"></div>
+                    </div>
                     <div class="body">
                         <div class="body-content">
                             <h3>
@@ -205,13 +262,15 @@ css: home.css
                             </p>
                         </div>
                     </div>
+                    <div class="close"></div>
                 </article>
             </div>
 
             <div class="col-xs-6 col-lg-4">
                 <article class="item">
-                    <div class="image" style="background-image: url('/images/new/lights.jpg')"></div>
-                    <div class="close"></div>
+                    <div class="image-wrapper">
+                        <div class="image" style="background-image: url('/images/new/lights.jpg')"></div>
+                    </div>
                     <div class="body">
                         <div class="body-content">
                             <h3>
@@ -225,53 +284,33 @@ css: home.css
                             </p>
                         </div>
                     </div>
+                    <div class="close"></div>
                 </article>
             </div>
 
-            <div class="col-xs-6 col-lg-4">
-                <article class="item">
-                    <div class="image" style="background-image: url('/images/new/crates_table.jpg')"></div>
-                    <div class="close"></div>
-                    <div class="body">
-                        <div class="body-content">
-                            <h3>
-                                <span>Crates </span><span>table </span>
-                            </h3>
-                            <p>
-                                Large coffee table I made for my company <a target="_blank"
-                                                                            href="http://www.label305.com/en">Label305</a>.
-                                It is made of eight crates in a structure resulting in space for LPs and small trays on
-                                the top for plants or beercaps.
-                            </p>
-                        </div>
-                    </div>
-                </article>
-            </div>
+            <!--<div class="col-xs-6 col-lg-4">-->
+                <!--<article class="item">-->
+                    <!--<div class="image-wrapper">-->
+                        <!--<div class="image" style="background-image: url('/images/new/crates_table.jpg')"></div>-->
+                    <!--</div>-->
+                    <!--<div class="body">-->
+                        <!--<div class="body-content">-->
+                            <!--<h3>-->
+                                <!--<span>Crates </span><span>table </span>-->
+                            <!--</h3>-->
+                            <!--<p>-->
+                                <!--Large coffee table I made for my company <a target="_blank"-->
+                                                                            <!--href="http://www.label305.com/en">Label305</a>.-->
+                                <!--It is made of eight crates in a structure resulting in space for LPs and small trays on-->
+                                <!--the top for plants or beercaps.-->
+                            <!--</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="close"></div>-->
+                <!--</article>-->
+            <!--</div>-->
         </div>
     </div>
-</section>
-<section id="about">
-    <h2 class="text-center">About me</h2>
-    <article>
-        <p class="intro text-center">A brief introduction</p>
-        <div class="content about">
-            <p>I am Olav Peuscher. I am a creator. I love to create both physical as digital
-                products. Within my company <a target="_blank" href="http://www.label305.com/en">Label305</a> , I
-                founded with
-                Joris Blaak, Xander Peuscher and Thijs Scheepers, we create digital products for clients. Translating
-                raw ideas to elegant digital products is what
-                is what challenges me.</p>
-            <p>Besides creating digital products, I love to work on physical products and electronics. As a hobby, I
-                build HiFi equipment for own purposes, work on bikes, musical instruments, and create several other
-                artifacts.
-            <p>Makin music has always been a passion for me. After playing in the cover band Tune Inn, I started with
-                Daan
-                Wirtz, the band has been evolved to the recording collective <a target="_blank"
-                                                                                href="http://www.bricksforbreakfast.com">Bricks
-                    for breakfast</a>. Within this collective, I am one of the producers and, not least I play the keys.
-            </p>
-        </div>
-    </article>
 </section>
 <section id="contact">
     <h2 class="text-center">Contact</h2>
@@ -281,5 +320,12 @@ css: home.css
             <p class="text-center">You can always contact me at <a href="mailto:olav@label305.com">olav@label305.com</a>
             </p>
         </div>
+        <!--<div class="links">-->
+            <!--<a target="_blank" href="http://www.label305.com/nl/portfolio/" class="logo label305"></a>-->
+            <!--<a target="_blank" href="http://www.bricksforbreakfast.com/" class="logo b4b"></a>-->
+        <!--</div>-->
     </article>
 </section>
+<footer>
+    <p>2016 Olav Peuscher</p>
+</footer>

@@ -67,6 +67,10 @@ p
   font-weight: 200
   color: $dark-gray-color
   padding-bottom: 15px
+  margin: 0
+  &:last-of-type,
+  &:last-child
+    padding-bottom: 0
   a
     color: white
     text-decoration: none
@@ -134,11 +138,12 @@ header
   float: right
   width: 100%
   height: 80vh
-  background-image: url('/images/rhodes.jpg')
+  //background-image: url('/images/rhodes.jpg')
   background-size: cover
   background-repeat: no-repeat
   background-attachment: fixed
   position: relative
+  background-color: $dark-gray-color
   &:after
     content: ''
     left: 60px
@@ -160,10 +165,10 @@ header
       margin-bottom: 90px
       position: relative
       padding: 0
-      color: $dark-gray-color
-      span
-        display: inline-block
-        background-color: white
+      color: white
+      //span
+      //  display: inline-block
+      //  background-color: white
       &:after
         content: ''
         height: 1px
@@ -175,7 +180,7 @@ header
     h2
       line-height: 20px
       text-transform: uppercase
-      font-size: 18px
+      font-size: 24px
       text-shadow: 0 0 15px rgba(0,0,0,0.15)
       color: white
       span
@@ -238,38 +243,43 @@ section
         position: relative
         width: 100%
         padding: 100% 0 0 0
-        overflow: hidden
         background-color: $dark-gray-color
         &:not(.open)
           cursor: pointer
         &:hover
           .image
             opacity: 0.75
-        .image
+        .image-wrapper
           position: absolute
-          background-position: center
-          background-size: cover
-          background-repeat: no-repeat
           width: 100%
           height: 100%
           left: 0
           top: 0
-          transform-origin: 0 0
-          transition: transform ease-out 250ms, opacity ease-out 250ms
+          overflow: hidden
+          .image
+            position: absolute
+            background-position: center
+            background-size: cover
+            background-repeat: no-repeat
+            width: 100%
+            height: 100%
+            left: 0
+            top: 0
+            transform-origin: 0 0
+            transition: transform ease-out 250ms, opacity ease-out 250ms
         .body
           width: calc(100% - 60px)
-          height: calc(100% - 60px)
+          height: auto
+          min-height: calc(100% - 60px)
           position: absolute
           left: 0
-          bottom: 0
+          top: 60px
           background-color: $yellow-color
           transform: scale(0)
-          transform-origin: 0 100%
+          transform-origin: 0 0
           transition: transform ease-out 375ms
           transition-delay: 125ms
           padding: 30px
-          opacity: 0.9
-          overflow-y: auto
           .body-content
             width: 100%
             opacity: 0
@@ -302,6 +312,7 @@ section
           &:after
             transform: rotate(-45deg)
         &.open
+          z-index: 99
           .close
             transform: scale(1)
             opacity: 0.75
@@ -318,9 +329,42 @@ section
             opacity: 1
             transition: opacity ease-out 250ms
             transition-delay: 375ms
-
+  .links
+    width: 100%
+    max-width: 640px
+    margin: 90px auto 0 auto
+    .logo
+      display: inline-block
+      float: left
+      width: 50%
+      height: 90px
+      background-position: center
+      background-repeat: no-repeat
+      &:first-child
+        border-right: 1px solid $light-gray-color
+      &.b4b
+        background-image: url(../images/b4b.svg)
+        background-size: 75%
+      &.label305
+        background-image: url(../images/label305.svg)
+        background-size: 50%
+footer
+  background-color: $light-gray-color
+  height: 30px
+  width: 100%
+  display: inline-block
+  float: left
+  p
+    font-size: 12px
+    color: $gray-color
+    line-height: 20px
+    padding: 5px 15px
+    float: left
+    width: 100%
+    text-align: center
+    font-family: $main-type-font
 nav
-  z-index: 9999
+  z-index: 999
   position: fixed
   left: 0
   top: 0
@@ -331,7 +375,7 @@ nav
     ul
       list-style-type: none
       padding: 0
-      margin: 0 60px 0 0
+      margin: 0 30px 0 0
       float: right
       li
         padding: 0
@@ -669,12 +713,18 @@ nav
       &.portfolio
         padding-left: 15px
         padding-right: 15px
-        .portfolio
-          .item
-            margin-bottom: 15px
-            .body
-              width: calc(100% - 30px)
-              height: calc(100% - 30px)
+        .item
+          margin-bottom: 15px
+          .body
+            width: 100%
+            min-height: 100%
+            top: 0
+            padding: 60px 15px 15px 15px
+          .close
+            &:before,
+            &:after
+              background-color: $dark-gray-color
+              z-index: 1000
   nav
     &.menu
       width: 60px
@@ -710,8 +760,8 @@ nav
       &.portfolio
         .item
           .body
-            width: calc(100% - 30px)
-            height: calc(100% - 30px)
+            width: calc(100% - 60px)
+            min-height: calc(100% - 60px)
 @media(min-width: 769px) and (max-width: 1200px)
   body
     padding-left: 0
@@ -724,7 +774,24 @@ nav
           left: 40px
 @media(max-width: 480px)
   section
-    .portfolio
-      [class*="col-"],
-      [class^="col-"]
-        width: 100% !important
+    h2
+      font-size: 24px
+    h2,
+    .intro,
+    .links
+      padding-left: 40px
+      padding-right: 40px
+    .links
+      .logo
+        width: 100%
+        border-right: 0!important
+    .content
+      &.about
+        padding-left: 40px
+        padding-right: 40px
+        p
+          text-align: center
+      &.portfolio
+        [class*="col-"],
+        [class^="col-"]
+          width: 100% !important

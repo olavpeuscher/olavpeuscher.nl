@@ -57,7 +57,7 @@ $(document).ready(function()
     /**
      * POrtfolio items texts
      **/
-    $('.item .image').bind('click', function(){
+    $('.item .image-wrapper').bind('click', function(){
         $(this).parent().addClass('open');
     });
 
