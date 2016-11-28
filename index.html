@@ -23,6 +23,7 @@ css: home.css
     </ul>
 </nav>
 <header>
+    <div class="overlay"></div>
     <div>
         <h1 class="text-center"><span>I am Olav Peuscher</span></h1>
         <h2 class="text-center">
@@ -37,17 +38,20 @@ css: home.css
         <p class="intro text-center">A brief introduction</p>
         <div class="content about">
             <p>I am Olav Peuscher. I am a creator. I love to create both physical as digital
-                products. Within <a target="_blank" href="http://www.label305.com/en">Label305</a>, the company I
+                products. Within <a name="label305" target="_blank" href="http://www.label305.com/en">Label305</a>, the company I
                 founded together with Joris Blaak, Xander Peuscher and Thijs Scheepers, we create digital products for clients. Translating
                 raw ideas to elegant digital products is what keeps me busy and challenges me.</p>
             <p>Besides creating digital products, I love to work on physical products and electronics. As a hobby, I
                 build HiFi equipment for own purposes, work on bikes, musical instruments, and create several other
                 artifacts.
-            <p>Makin music has always been a passion for me. After playing in the cover band Tune Inn, I started with
-                Daan Wirtz, the band has been evolved into the recording collective <a target="_blank"
+            <p>Makin music has always been a passion for me. After playing in the cover band <a href="https://nl-nl.facebook.com/TuneInnBand/" target="_blank">Tune Inn</a>, I started with
+                Daan Wirtz, the band has been evolved into the recording collective <a target="_blank" name="bricksforbreakfast"
                                                                                 href="http://www.bricksforbreakfast.com">Bricks
                     for breakfast</a>. Within this collective, I am one of the producers and, not least, I play the keys.
             </p>
+        </div>
+        <div class="content about text-center">
+            <img src="/images/me.jpg"  width="180"/>
         </div>
     </article>
 </section>
@@ -159,27 +163,6 @@ css: home.css
             <div class="col-xs-6 col-lg-4">
                 <article class="item">
                     <div class="image-wrapper">
-                        <div class="image" style="background-image: url('/images/new/amplissimo.jpg')"></div>
-                    </div>
-                    <div class="body">
-                        <div class="body-content">
-                            <h3>
-                                <span>3-channel </span><span>gainclone </span><span>amplifier </span>
-                            </h3>
-                            <p>
-                                My first DIY amplifier. It is based on three LM3886 chips, a 500w toroidal transformer
-                                and a nicely build power supply. The amplifier features three channels of 65 watt
-                                each. I used it as one amplifier for powering the front- and center speakers.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="close"></div>
-                </article>
-            </div>
-
-            <div class="col-xs-6 col-lg-4">
-                <article class="item">
-                    <div class="image-wrapper">
                         <div class="image" style="background-image: url('/images/new/center.jpg')"></div>
                     </div>
                     <div class="body">
@@ -213,33 +196,36 @@ css: home.css
                             <p>
                                 Expandable LM3886 based HiFi amplifier. The amplifier can be extended to 3 LM3886 ic's parallel per channel.
 
-                                The amlifier was awarded second place during the <a target="_blank"
-                                                                                 href="http://forum.zelfbouwaudio.nl/viewtopic.php?f=56&t=12823">amplifier of the year 2010</a> at forum.zelfbouwaudio.nl.
+                                The amlifier was awarded second place during the <a target="_blank" href="http://forum.zelfbouwaudio.nl/viewtopic.php?f=56&t=12823">amplifier of the year 2010</a> at forum.zelfbouwaudio.nl.
 
                             </p>
+                        </div>
+                        <div class="body-footer">
+                            <a class="btn pull-right" target="_blank" href="http://zelfbouwaudio.nl/forum/viewtopic.php?p=1497387#p1497387">Project page (forum)</a>
                         </div>
                     </div>
                     <div class="close"></div>
                 </article>
             </div>
 
-
             <div class="col-xs-6 col-lg-4">
                 <article class="item">
                     <div class="image-wrapper">
-                        <div class="image" style="background-image: url('/images/sk20.jpg')"></div>
+                        <div class="image" style="background-image: url('/images/new/amplissimo.jpg')"></div>
                     </div>
                     <div class="body">
                         <div class="body-content">
                             <h3>
-                                <span>Yamaha </span><span>SK20 </span><span>re-design</span>
+                                <span>3-channel </span><span>gainclone </span><span>amplifier </span>
                             </h3>
                             <p>
-                                Being in search for a cool organ, I found a Yamaha SK20 that could have some care. I
-                                build a new wooden case from scratch, repaired broken knobs an circuits and it looked
-                                better than ever before. Some images of the restoration can be found <a target="_blank" href="http://www.synthforum.nl/forums/showthread.php?t=127451">here (Dutch)</a>.
-                                The sound was not what I was looking for in the end, so I sold this synth.
+                                My first DIY amplifier. It is based on three LM3886 chips, a 500w toroidal transformer
+                                and a nicely build power supply. The amplifier features three channels of 65 watt
+                                each. I used it as one amplifier for powering the front- and center speakers.
                             </p>
+                        </div>
+                        <div class="body-footer">
+                            <a class="btn pull-right" target="_blank" href="http://zelfbouwaudio.nl/forum/viewtopic.php?f=7&t=9022">Project page (forum)</a>
                         </div>
                     </div>
                     <div class="close"></div>
@@ -269,6 +255,31 @@ css: home.css
             <div class="col-xs-6 col-lg-4">
                 <article class="item">
                     <div class="image-wrapper">
+                        <div class="image" style="background-image: url('/images/sk20.jpg')"></div>
+                    </div>
+                    <div class="body">
+                        <div class="body-content">
+                            <h3>
+                                <span>Yamaha </span><span>SK20 </span><span>re-design</span>
+                            </h3>
+                            <p>
+                                Being in search for a cool organ, I found a Yamaha SK20 that could have some love and care. I
+                                build a new wooden case from scratch, repaired broken knobs an circuits and it looked
+                                better than ever before.
+                                The sound was not what I was looking for in the end, so I sold this synth.
+                            </p>
+                        </div>
+                        <div class="body-footer">
+                            <a class="btn pull-right" target="_blank" href="http://www.synthforum.nl/forums/showthread.php?t=127451">Project page (forum)</a>
+                        </div>
+                    </div>
+                    <div class="close"></div>
+                </article>
+            </div>
+
+            <div class="col-xs-6 col-lg-4">
+                <article class="item">
+                    <div class="image-wrapper">
                         <div class="image" style="background-image: url('/images/new/lights.jpg')"></div>
                     </div>
                     <div class="body">
@@ -287,28 +298,6 @@ css: home.css
                     <div class="close"></div>
                 </article>
             </div>
-
-            <!--<div class="col-xs-6 col-lg-4">-->
-                <!--<article class="item">-->
-                    <!--<div class="image-wrapper">-->
-                        <!--<div class="image" style="background-image: url('/images/new/crates_table.jpg')"></div>-->
-                    <!--</div>-->
-                    <!--<div class="body">-->
-                        <!--<div class="body-content">-->
-                            <!--<h3>-->
-                                <!--<span>Crates </span><span>table </span>-->
-                            <!--</h3>-->
-                            <!--<p>-->
-                                <!--Large coffee table I made for my company <a target="_blank"-->
-                                                                            <!--href="http://www.label305.com/en">Label305</a>.-->
-                                <!--It is made of eight crates in a structure resulting in space for LPs and small trays on-->
-                                <!--the top for plants or beercaps.-->
-                            <!--</p>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                    <!--<div class="close"></div>-->
-                <!--</article>-->
-            <!--</div>-->
         </div>
     </div>
 </section>
@@ -316,14 +305,19 @@ css: home.css
     <h2 class="text-center">Contact</h2>
     <article>
         <p class="intro text-center">Lets keep in touch</p>
-        <div class="content">
-            <p class="text-center">You can always contact me at <a href="mailto:olav@label305.com">olav@label305.com</a>
+        <div class="content contact">
+            <p>You can always contact me at <a href="mailto:olav@label305.com">olav@label305.com</a>.
+
+                But you can also have a look at the digital products we create within Label305.
+                Curious about the music I create with Bricksforbreakfast? Have a look at bricksforbreakfast's page.
             </p>
         </div>
-        <!--<div class="links">-->
-            <!--<a target="_blank" href="http://www.label305.com/nl/portfolio/" class="logo label305"></a>-->
-            <!--<a target="_blank" href="http://www.bricksforbreakfast.com/" class="logo b4b"></a>-->
-        <!--</div>-->
+        <div class="content text-center">
+            <div class="links">
+                <a name="label305" target="_blank" href="http://www.label305.com/nl/portfolio/" class="logo label305"></a>
+                <a name="bricksforbreakfast" target="_blank" href="http://www.bricksforbreakfast.com/" class="logo b4b"></a>
+            </div>
+        </div>
     </article>
 </section>
 <footer>
