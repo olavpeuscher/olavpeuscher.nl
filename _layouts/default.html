@@ -1,49 +1,26 @@
 <!DOCTYPE html>
 <html>
-<!--
- _            _          _ ____   ___  _____ 
-| |          | |        | |___ \ / _ \| ____|
-| |      __ _| |__   ___| | __) | |_| | |__  
-| |     / _` | '_ \ / _ \ ||__ <|     |___ \ 
-| |____| (_| | |_) |  __/ |___) |     |___) |
-|______|\__,_|_.__/ \___|_|____/ \___/|____/ 
-
--->
 <head>
 	<title>{{ site.name }} - {{ page.title }}</title>
 	<meta name="description" content="Portfolio site of Olav Peuscher"/>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 	<meta name="author" content="Olav Peuscher" />
 
-	<!--[if lt IE 9]>
-	<script type="text/javascript" src="/js/html5shiv.js"></script>	
-	<link rel="stylesheet" type="text/css" href="/css/ie.css" />	
-	<![endif]-->
+	<meta name="p:domain_verify" content="8ee6b78cc7688cb37092f8a2769c2802"/>
 
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-{% for css_name in page.css %}
-    <link rel="stylesheet" type="text/css" href="/css/{{ css_name }}">
-
-{% endfor %}
-
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/default.css" />
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 
 	
 <html>
 	<body>
-		<!--HEADER-->
-		<header>
-			<nav>
-			</nav>
-		</header>
 			
 			{{ content }}
 
-		<!--FOOTER-->
-		<footer></footer>
 	</body>
 </html>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>

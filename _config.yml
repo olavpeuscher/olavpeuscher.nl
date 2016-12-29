@@ -1,4 +1,6 @@
-name: Label305
-gems: [jekyll-sass]
+name: Olav Peuscher Portfolio
 markdown: redcarpet
-pygments: true
+exclude: [Vagrantfile, README.md, LICENSE]
+sass:
+    sass_dir: _sass
+    style: compressed
