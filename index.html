@@ -5,7 +5,7 @@ css: home.css
 ---
 
 
-<nav class="social">
+<nav class="social" xmlns="http://www.w3.org/1999/html">
     <ul>
         <li><a href="http://nl.linkedin.com/pub/olav-peuscher/50/72b/aa1" target="_blank" class="ion-social-linkedin"></a></li>
     </ul>
@@ -17,7 +17,9 @@ css: home.css
     </div>
     <ul>
         <li><a target-anchor="#about" class="to-anchor ion-ios-person-outline">About me</a></li>
-        <li><a target-anchor="#portfolio" class="to-anchor ion-ios-photos-outline">Personal projects</a></li>
+        <li><a target-anchor="#audio" class="to-anchor ion-headphone">Audio products</a></li>
+        <li><a target-anchor="#digital" class="to-anchor ion-laptop">Digital work</a></li>
+        <li><a target-anchor="#physical" class="to-anchor ion-easel">Artifacts</a></li>
         <li><a target-anchor="#contact" class="to-anchor ion-ios-email-outline">Contact</a></li>
     </ul>
 </nav>
@@ -29,24 +31,34 @@ css: home.css
            I create
         </h2>
     </div>
-    <div target-anchor="#portfolio" class="btn-scroll to-anchor"></div>
+    <div target-anchor="#about" class="btn-scroll to-anchor"></div>
 </header>
 <section id="about">
     <h2 class="text-center">About me</h2>
     <article>
         <p class="intro text-center">A brief introduction</p>
         <div class="content about">
-            <p>I am Olav Peuscher. I am a creator. I love to create both physical as digital
-                products. Within <a name="label305" target="_blank" href="http://www.label305.com/en">Label305</a>, the company I
-                founded together with Joris Blaak, Xander Peuscher and Thijs Scheepers, we create digital products for clients. Translating
+            <p class="leading">My name Olav Peuscher. I am a creator. I love to create both physical as digital
+                products.
+                Besides creating digital products, I love to work on music, physical products and electronics.
+            </p>
+            <p>
+                Within <a name="label305" target="_blank" href="http://www.label305.com/en">Label305</a>, the company I
+                founded together with <em>Joris Blaak</em>, <em>Xander Peuscher</em> and <em>Thijs Scheepers</em>, we create digital products for clients. Translating
                 raw ideas to elegant digital products is what keeps me busy and challenges me.</p>
-            <p>Besides creating digital products, I love to work on physical products and electronics. As a hobby, I
+
+            <p>
+                Besides creating digital products, I love to work on physical products and electronics. As a hobby, I
                 build HiFi equipment for own purposes, work on bikes, musical instruments, and create several other
                 artifacts.
-            <p>Makin music has always been a passion for me. After playing in the cover band <a href="https://nl-nl.facebook.com/TuneInnBand/" target="_blank">Tune Inn</a>, I started with
-                Daan Wirtz, the band has been evolved into the recording collective <a target="_blank" name="bricksforbreakfast"
+            <p>
+                Making music has always been a passion for me. After playing in the cover band <a href="https://nl-nl.facebook.com/TuneInnBand/" target="_blank">Tune Inn</a>, which I started with
+                <em>Daan Wirtz</em>, the band has been evolved into the recording collective <a target="_blank" name="bricksforbreakfast"
                                                                                 href="http://www.bricksforbreakfast.com">Bricks
                     for breakfast</a>. Within this collective, I am one of the producers and, not least, I play the keys.
+            </p>
+            <p>
+                I have master degree in Industrial Design Engineering, and propedeutics in Mechanical Engineering.
             </p>
         </div>
         <div class="content about text-center">
@@ -54,9 +66,12 @@ css: home.css
         </div>
     </article>
 </section>
-<section id="portfolio">
-    <h2 class="text-center">Personal projects</h2>
-    <p class="intro text-center">A selection of personal work over the years.</p>
+
+<!--AUDIO-->
+
+<section id="audio">
+    <h2 class="text-center">Audio products</h2>
+    <p class="intro text-center">A selection of DIY audio products I crafted over the years.</p>
     <div class="content portfolio">
         <div class="row">
             <div class="col-xs-6 col-lg-4">
@@ -92,29 +107,6 @@ css: home.css
             <div class="col-xs-6 col-lg-4">
                 <article class="item">
                     <div class="image-wrapper">
-                        <div class="image" style="background-image: url('/images/painting.jpg')"></div>
-                    </div>
-                    <div class="body">
-                        <div class="body-content">
-                            <h3>
-                                <span>Oil</span>
-                                <span>painting</span>
-                            </h3>
-                            <p>
-                                Painting made with oil-paint, decorated by a simple but stylish self made oak wooden
-                                frame. There is not a real story behind the painting, except the orange colour being
-                                inspired by sunset since I love the view of sunset. The colours were blended making use
-                                of a trowel, adding some warmth to my living room.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="close"></div>
-                </article>
-            </div>
-
-            <div class="col-xs-6 col-lg-4">
-                <article class="item">
-                    <div class="image-wrapper">
                         <div class="image" style="background-image: url('/images/amps.jpg')"></div>
                     </div>
                     <div class="body">
@@ -132,27 +124,6 @@ css: home.css
                                 The mono amplifier is based on the LM3886 chip, has a nice 125W toroidal transformer and
                                 produces a transparent sound for the center speaker.
                             </p>
-                        </div>
-                    </div>
-                    <div class="close"></div>
-                </article>
-            </div>
-
-            <div class="col-xs-6 col-lg-4">
-                <article class="item">
-                    <div class="image-wrapper">
-                        <div class="image" style="background-image: url('/images/bike.jpg')"></div>
-                    </div>
-                    <div class="body">
-                        <div class="body-content">
-                            <h3>
-                                <span>Fast </span><span>city </span><span>bike </span>
-                            </h3>
-                            <p>
-                                When my second hand Koga Miyata bike was looking bad after 12 years of use, I upgraded
-                                my old bike with new parts, nice wheels and a fresh paintjob.
-                            </p>
-                            <p>All unneeded mounting points were removed, creating a simple and minimalistic frame.</p>
                         </div>
                     </div>
                     <div class="close"></div>
@@ -234,32 +205,12 @@ css: home.css
             <div class="col-xs-6 col-lg-4">
                 <article class="item">
                     <div class="image-wrapper">
-                        <div class="image" style="background-image: url('/images/driek.jpg')"></div>
-                    </div>
-                    <div class="body">
-                        <div class="body-content">
-                            <h3>
-                                <span>Bolts </span><span>and </span><span>nuts </span><span>Bike </span>
-                            </h3>
-                            <p>
-                                As a present for a friend's graduation, I welded this bike together from nuts and bolts.
-                                Jelle Kuster did the design and I practiced my welding skills.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="close"></div>
-                </article>
-            </div>
-
-            <div class="col-xs-6 col-lg-4">
-                <article class="item">
-                    <div class="image-wrapper">
                         <div class="image" style="background-image: url('/images/sk20.jpg')"></div>
                     </div>
                     <div class="body">
                         <div class="body-content">
                             <h3>
-                                <span>Yamaha </span><span>SK20 </span><span>re-design</span>
+                                <span>Yamaha </span><span>SK20 </span><span>overhaul</span>
                             </h3>
                             <p>
                                 Being in search for a cool organ, I found a Yamaha SK20 that could have some love and care. I
@@ -275,31 +226,310 @@ css: home.css
                     <div class="close"></div>
                 </article>
             </div>
-
-            <div class="col-xs-6 col-lg-4">
-                <article class="item">
-                    <div class="image-wrapper">
-                        <div class="image" style="background-image: url('/images/lights.jpg')"></div>
-                    </div>
-                    <div class="body">
-                        <div class="body-content">
-                            <h3>
-                                <span>Scaffolding tube </span><span>lights </span><span>with </span><span>filament lights </span>
-                            </h3>
-                            <p>
-                                Large light for the dining table I made for my company <a target="_blank"
-                                                                                          href="http://www.label305.com/en">Label305</a>.
-                                It is made of scaffolding tube and vintage filament bulbs. The light is really cosy and
-                                it is a nice eye catcher when entering the office.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="close"></div>
-                </article>
-            </div>
         </div>
     </div>
 </section>
+
+<!--DIGITAL-->
+
+<section id="digital">
+    <h2 class="text-center">Digital work</h2>
+    <p class="intro text-center">A selection of digital projects I worked on over the years.</p>
+    <div class="content digital">
+        <p>
+            Within this section, only digital products where I was the lead designer or developer are shown.
+            For a complete overview of products I worked on, check the <a name="label305 portfolio" target="_blank" href="http://www.label305.com/en/portfolio">portfolio page</a> of my company <strong>Label305</strong>.
+        </p>
+    </div>
+    <div class="content portfolio">
+        <div class="col-xs-6 col-lg-4">
+            <article class="item">
+                <div class="image-wrapper">
+                    <div class="image" style="background-image: url('/images/distraction.jpg')"></div>
+                </div>
+                <div class="body">
+                    <div class="body-content">
+                        <h3>
+                            <span>EP </span><span>cover </span><span>Bricks</span><span>for</span><span>breakfast</span>
+                        </h3>
+                        <p>
+                            For the Bricksforbreakfast EP <strong>Distraction</strong> we needed an EP cover. I came up
+                            with an idea to use different pastel colors, used as lines in a way that it distracts where to focus on. </br>
+                            Besides the lines being distracting, the cover had to have a warm feel.
+                        </p>
+                    </div>
+                    <div class="body-footer">
+                        <a class="btn pull-right" target="_blank" href="http://www.bricksforbreakfast.com">Listen the EP</a>
+                    </div>
+                </div>
+                <div class="close"></div>
+            </article>
+        </div>
+
+        <div class="col-xs-6 col-lg-4">
+            <article class="item">
+                <div class="image-wrapper">
+                    <div class="image" style="background-image: url('/images/glutenfree_philosophy.jpg')"></div>
+                </div>
+                <div class="body">
+                    <div class="body-content">
+                        <h3>
+                            <span>EP </span><span>cover </span><span>Bricks</span><span>for</span><span>breakfast</span>
+                        </h3>
+                        <p>
+                            For the Bricksforbreakfast single <strong>Glutenfree philosophy</strong> we needed a cover.
+                            Since the track is fooling with people's online behavior, I came up with a kind of <em>Hipster</em>
+                            fake beer-ish cover, capturing some of the topics mentioned within the song.
+                        </p>
+                    </div>
+                    <div class="body-footer">
+                        <a class="btn pull-right" target="_blank" href="http://www.bricksforbreakfast.com">Listen the EP</a>
+                    </div>
+                </div>
+                <div class="close"></div>
+            </article>
+        </div>
+
+        <div class="col-xs-6 col-lg-4">
+            <article class="item">
+                <div class="image-wrapper">
+                    <div class="image" style="background-image: url('/images/one.jpg')"></div>
+                </div>
+                <div class="body">
+                    <div class="body-content">
+                        <h3>
+                            <span>EP </span><span>cover </span><span>Bricks</span><span>for</span><span>breakfast</span>
+                        </h3>
+                        <p>
+                            Another cover for <strong>Bricksforbreakfast</strong>. This time the cover for our old recordings that were never released officially, but are present on Soundcloud.
+                        </p>
+                    </div>
+                </div>
+                <div class="close"></div>
+            </article>
+        </div>
+
+        <div class="col-xs-6 col-lg-4">
+            <article class="item">
+                <div class="image-wrapper">
+                    <div class="image" style="background-image: url('/images/label305.jpg')"></div>
+                </div>
+                <div class="body">
+                    <div class="body-content">
+                        <h3>
+                            <span>Website </span><span>Label305</span>
+                        </h3>
+                        <p>
+                            For my company <strong>Label305</strong>, I did a lot of design and implementation of our website. Besides design and implementation, I created a lot of artwork and did most of the photography.
+                        </p>
+                    </div>
+                    <div class="body-footer">
+                        <a class="btn pull-right" target="_blank" href="http://www.label305.com">Visit website</a>
+                    </div>
+                </div>
+                <div class="close"></div>
+            </article>
+        </div>
+
+        <div class="col-xs-6 col-lg-4">
+            <article class="item">
+                <div class="image-wrapper">
+                    <div class="image" style="background-image: url('/images/bricksforbreakfast.jpg')"></div>
+                </div>
+                <div class="body">
+                    <div class="body-content">
+                        <h3>
+                            <span>Website </span><span>Bricks</span><span>for</span><span>breakfast</span>
+                        </h3>
+                        <p>
+                            For my recording collective <a name="Bricksforbreakfast site" target="_blank"
+                                                           href="http://www.bricksforbreakfast.com">Bricksforbreakfast</a>, I designed and implemented a simple <strong>Jekyll</strong> based website. The website is fully responsive.
+                        </p>
+                    </div>
+                    <div class="body-footer">
+                        <a class="btn pull-right" target="_blank" href="http://www.bricksforbreakfast.com">Visit website</a>
+                    </div>
+                </div>
+                <div class="close"></div>
+            </article>
+        </div>
+
+        <div class="col-xs-6 col-lg-4">
+            <article class="item">
+                <div class="image-wrapper">
+                    <div class="image" style="background-image: url('/images/ernabaltussen.jpg')"></div>
+                </div>
+                <div class="body">
+                    <div class="body-content">
+                        <h3>
+                            <span>Website </span><span>Erna Baltussen</span>
+                        </h3>
+                        <p>
+                            For <strong>Erna Baltussen uitvaartbegeleiding</strong> I created a new website, based on the corporate Identity I made acouplke oy years ago. The website is a simple <strong>Laravel</strong> based application, with a custom front-end admin. The header image was taken during autumn in Enschede. The website is fully responsive.
+                        </p>
+                    </div>
+                </div>
+                <div class="close"></div>
+            </article>
+        </div>
+
+        <div class="col-xs-6 col-lg-4">
+            <article class="item">
+                <div class="image-wrapper">
+                    <div class="image" style="background-image: url('/images/keeping.jpg')"></div>
+                </div>
+                <div class="body">
+                    <div class="body-content">
+                        <h3>
+                            <span>Keeping </span><span>logo </span>
+                        </h3>
+                        <p>
+                            For Label305's product <a name="Keeping site" target="_blank"
+                                                      href="http://www.keeping.nl">Keeping</a>, besides being one of the
+                            main developers/UX engineers, I designed the Keeping logo. The letters were designed based
+                            on an existing font, but more symmetry and geometry was added. The green shape represents both an open
+                            wallet (money) as a folder (ordering).
+                        </p>
+                    </div>
+                </div>
+                <div class="close"></div>
+            </article>
+        </div>
+
+        <div class="col-xs-6 col-lg-4">
+            <article class="item">
+                <div class="image-wrapper">
+                    <div class="image" style="background-image: url('/images/bricksforbreakfast_logo.jpg')"></div>
+                </div>
+                <div class="body">
+                    <div class="body-content">
+                        <h3>
+                            <span>Bricks</span><span>for</span><span>breakfast </span><span>logo </span>
+                        </h3>
+                        <p>
+                            For my recording collective <a name="Bricksforbreakfast site" target="_blank"
+                                                           href="http://www.bricksforbreakfast.com">Bricksforbreakfast</a>, I designed a simple logo that represents the name: two bricks on a plate, the ideal breakfast ;)
+                        </p>
+                    </div>
+                </div>
+                <div class="close"></div>
+            </article>
+        </div>
+
+        <div class="col-xs-6 col-lg-4">
+            <article class="item">
+                <div class="image-wrapper">
+                    <div class="image" style="background-image: url('/images/fluke.jpg')"></div>
+                </div>
+                <div class="body">
+                    <div class="body-content">
+                        <h3>
+                            <span>Fluke </span><span>Power </span><span>Quality </span><span>Analyser </span><span>study </span>
+                        </h3>
+                        <p>
+                            During my education, I did a bachelor assignment for Fluke, which incorporated a case study for a new type of Power Quality Analyser. One big part of the case study was to create a new design and implement it as a CAD model, for 3D printing of the concept.
+                        </p>
+                    </div>
+                </div>
+                <div class="close"></div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!--PHYSICAL-->
+
+<section id="physical">
+    <h2 class="text-center">Artifacts</h2>
+    <p class="intro text-center">A selection of different artifacts I created over the years.</p>
+    <div class="content portfolio">
+        <div class="col-xs-6 col-lg-4">
+            <article class="item">
+                <div class="image-wrapper">
+                    <div class="image" style="background-image: url('/images/painting.jpg')"></div>
+                </div>
+                <div class="body">
+                    <div class="body-content">
+                        <h3>
+                            <span>Oil</span>
+                            <span>painting</span>
+                        </h3>
+                        <p>
+                            Painting made with oil-paint, decorated by a simple but stylish self made oak wooden
+                            frame. There is not a real story behind the painting, except the orange colour being
+                            inspired by sunset since I love the view of sunset. The colours were blended making use
+                            of a trowel, adding some warmth to my living room.
+                        </p>
+                    </div>
+                </div>
+                <div class="close"></div>
+            </article>
+        </div>
+
+        <div class="col-xs-6 col-lg-4">
+            <article class="item">
+                <div class="image-wrapper">
+                    <div class="image" style="background-image: url('/images/bike.jpg')"></div>
+                </div>
+                <div class="body">
+                    <div class="body-content">
+                        <h3>
+                            <span>Fast </span><span>city </span><span>bike </span>
+                        </h3>
+                        <p>
+                            When my second hand Koga Miyata bike was looking bad after 12 years of use, I upgraded
+                            my old bike with new parts, nice wheels and a fresh paintjob.
+                        </p>
+                        <p>All unneeded mounting points were removed, creating a simple and minimalistic frame.</p>
+                    </div>
+                </div>
+                <div class="close"></div>
+            </article>
+        </div>
+
+        <div class="col-xs-6 col-lg-4">
+            <article class="item">
+                <div class="image-wrapper">
+                    <div class="image" style="background-image: url('/images/motorcycle.jpg')"></div>
+                </div>
+                <div class="body">
+                    <div class="body-content">
+                        <h3>
+                            <span>Bolts </span><span>and </span><span>nuts </span><span>Bike </span>
+                        </h3>
+                        <p>
+                            As a present for a friend's graduation, I welded this bike together from nuts and bolts.
+                            Jelle Kuster did most of the design and I practiced my welding skills.
+                        </p>
+                    </div>
+                </div>
+                <div class="close"></div>
+            </article>
+        </div>
+
+        <div class="col-xs-6 col-lg-4">
+            <article class="item">
+                <div class="image-wrapper">
+                    <div class="image" style="background-image: url('/images/fluke_2.jpg')"></div>
+                </div>
+                <div class="body">
+                    <div class="body-content">
+                        <h3>
+                            <span>Fluke </span><span>Power </span><span>Quality </span><span>Analyser </span><span>SLA model</span>
+                        </h3>
+                        <p>
+                            During my education, I did a bachelor assignment for Fluke, which incorporated a case study for a new type of Power Quality Analyser. One big part of the case study was to create a new design and implement it as a CAD model, for 3D printing of the concept.
+                            </br>
+                            This is the 3D printed, and painted concept I made.
+                        </p>
+                    </div>
+                </div>
+                <div class="close"></div>
+            </article>
+        </div>
+    </div>
+</section>
+
 <section id="contact">
     <h2 class="text-center">Contact</h2>
     <article>
@@ -320,5 +550,5 @@ css: home.css
     </article>
 </section>
 <footer>
-    <p>2016 Olav Peuscher</p>
+    <p><strong>2017 Olav Peuscher</strong></p>
 </footer>

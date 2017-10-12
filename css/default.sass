@@ -25,7 +25,7 @@ h2
   padding: 0
   position: relative
   line-height: 30px
-  font-size: 28px
+  font-size: 30px
   color: $dark-gray-color
   text-transform: uppercase
   display: inline-block
@@ -40,7 +40,7 @@ h3
   font-size: 24px
   text-transform: uppercase
   display: inline-block
-  font-weight: 200
+  font-weight: 300
   width: 100%
   span
     position: relative
@@ -63,8 +63,8 @@ h3
       padding: 0
 p
   font-family: $serif-type-font
-  font-size: 14px
-  line-height: 28px
+  font-size: 16px
+  line-height: 30px
   font-weight: 200
   color: $dark-gray-color
   padding-bottom: 15px
@@ -86,8 +86,8 @@ p
       position: absolute
       width: 100%
       left: 0
-      top: 4px
-      height: 20px
+      bottom: 6px
+      height: 16px
       background-color: $dark-gray-color
       z-index: -1
       transition: background ease-out 200ms
@@ -100,8 +100,15 @@ p
           background-color: $gray-color
           transition: background ease-in-out 200ms
   &.leading
-    font-size: 16px
-    line-height: 24px
+    font-size: 20px
+    &:first-letter
+      float: left
+      padding: 0 5px 0 0
+      font-size: 60px
+      line-height: 60px
+      font-weight: normal
+      color: $red-color
+
     a
       color: #ffffff
       &:before
@@ -115,7 +122,7 @@ p
     margin: 0 0 15px 0
     min-height: 20px
     text-transform: uppercase
-    font-weight: 200
+    font-weight: 300
     span
       position: relative
       padding: 3px 5px 3px 0
@@ -139,7 +146,7 @@ header
   display: table
   float: right
   width: 100%
-  height: 80vh
+  height: 70vh
   background-image: url('/images/header.jpg')
   background-size: cover
   background-repeat: no-repeat
@@ -160,7 +167,7 @@ header
     left: 60px
     bottom: 0
     height: 60px
-    width: 1px
+    width: 2px
     position: absolute
     background-color: $red-color
   .btn-scroll
@@ -181,12 +188,24 @@ header
       color: white
       &:after
         content: ''
-        height: 1px
+        height: 2px
         width: 60px
         background-color: $red-color
         position: absolute
         left: calc(50% - 30px)
         bottom: -45px
+      span
+        position: relative
+        z-index: 1
+        &:before
+          content: ''
+          position: absolute
+          bottom: 12px
+          left: 0
+          width: 100%
+          height: 45px
+          background-color: $black-color
+          z-index: -1
     h2
       line-height: 20px
       text-transform: uppercase
@@ -204,7 +223,7 @@ section
   position: relative
   &:before
     content: ''
-    width: 1px
+    width: 2px
     top: 0
     left: 60px
     position: absolute
@@ -217,7 +236,7 @@ section
     &:after,
     &:before
       content: ''
-      height: 1px
+      height: 2px
       position: absolute
       bottom: 0
     &:after
@@ -231,7 +250,7 @@ section
   .intro
     width: 100%
     color: $dark-gray-color
-    font-size: 12px
+    font-size: 14px
     margin-bottom: 90px
   .content
     display: block
@@ -240,7 +259,8 @@ section
     img
       margin: 30px auto 0 auto
     &.about,
-    &.contact
+    &.contact,
+    &.digital
       max-width: 640px
       padding: 20px 30px 0 30px
       .avatar
@@ -248,6 +268,9 @@ section
         width: 100%
         float: left
         margin-bottom: 30px
+    &.digital
+      padding-top: 0
+      padding-bottom: 30px
     &.portfolio
       max-width: 1400px
       padding: 30px 30px 0 30px
@@ -412,9 +435,14 @@ nav
           color: $gray-color
           text-decoration: none
           transition: color ease-out 250ms
+          -moz-transition: color ease-out 250ms
+          -webkit-transition: color ease-out 250ms
           &:hover
             color: $red-color
             transition: color ease-out 250ms
+            -moz-transition: color ease-out 250ms
+            -webkit-transition: color ease-out 250ms
+            cursor: pointer
   &.menu
     width: 90px
     height: 100%
@@ -437,6 +465,8 @@ nav
               color: white
               background-color: $dark-gray-color
               transition: color ease-out 250ms, background ease-out 250ms
+              -moz-transition: color ease-out 250ms, background ease-out 250ms
+              -webkit-transition: color ease-out 250ms, background ease-out 250ms
       .overlay
         background-color: rgba(255,255,255,0.75)
     .overlay
@@ -448,6 +478,8 @@ nav
       width: 100%
       background-color: rgba(61,51,41,0.5)
       transition: background ease-out 250ms
+      -moz-transition: background ease-out 250ms
+      -webkit-transition: background ease-out 250ms
     ul
       list-style-type: none
       padding: 0
@@ -463,7 +495,11 @@ nav
         width: 100%
         margin: 5px 0
         transition: transform ease-out 250ms
+        -moz-transition: transform ease-out 250ms
+        -webkit-transition: transform ease-out 250ms
         transition-delay: 100ms
+        -moz-transition-delay: 100ms
+        -webkit-transition-delay: 100ms
         a
           padding: 10px 0 10px 50px
           line-height: 20px
@@ -477,6 +513,8 @@ nav
           opacity: 0
           transform-origin: 0 50%
           transition: opacity ease-out 250ms
+          -moz-transition: opacity ease-out 250ms
+          -webkit-transition: opacity ease-out 250ms
           color: white
           cursor: pointer
           &:before
@@ -494,27 +532,39 @@ nav
             top: 0
             transform: scale(0)
             transition: transform ease-out 250ms, color ease-out 250ms, background ease-out 250ms
+            -moz-transition: transform ease-out 250ms, color ease-out 250ms, background ease-out 250ms
+            -webkit-transition: transform ease-out 250ms, color ease-out 250ms, background ease-out 250ms
             transform-origin: center center
+            -moz-transform-origin: center center
+            -webkit-transform-origin: center center
         &:nth-child(1)
           transform: translateY(-65px)
           a,
           a:before
             transition-delay: 200ms
+            -moz-transition-delay: 200ms
+            -webkit-transition-delay: 200ms
         &:nth-child(2)
           transform: translateY(-120px)
           a,
           a:before
             transition-delay: 150ms
+            -moz-transition-delay: 150ms
+            -webkit-transition-delay: 150ms
         &:nth-child(3)
           transform: translateY(-175px)
           a,
           a:before
             transition-delay: 100ms
+            -moz-transition-delay: 100ms
+            -webkit-transition-delay: 100ms
         &:nth-child(4)
           transform: translateY(-230px)
           a,
           a:before
             transition-delay: 50ms
+            -moz-transition-delay: 50ms
+            -webkit-transition-delay: 50ms
     #menu-trigger
       position: absolute
       cursor: pointer
@@ -534,7 +584,7 @@ nav
       &:after,
       span
         width: 20px
-        height: 1px
+        height: 2px
         background-color: $dark-gray-color
         display: block
         position: absolute
@@ -557,11 +607,6 @@ nav
         top: 24px
       &:after
         top: 36px
-      &:hover
-        &:before
-          transform: translateY(-3px)
-        &:after
-          transform: translateY(3px)
       &.open
         border-radius: 30px
         transform: rotate(135deg)
@@ -613,6 +658,10 @@ nav
             a,
             a:before
               transition-delay: 200ms
+          &:nth-child(5)
+            a,
+            a:before
+              transition-delay: 250ms
       .overlay
         display: block
         opacity: 1
@@ -643,7 +692,7 @@ nav
   &:before,
   &:after
     content: ''
-    width: 1px
+    width: 2px
     height: 40px
     position: absolute
     transform-origin: center 40px
@@ -696,16 +745,16 @@ nav
   display: inline-block
   width: auto
   min-width: 100px
-  padding: 5px 10px
-  height: 30px
+  padding: 8px 15px
+  height: 36px
   line-height: 18px
-  font-size: 14px
-  border: 1px solid $dark-gray-color
+  font-size: 16px
+  border: 2px solid $dark-gray-color
   color: $dark-gray-color
   text-transform: uppercase
   font-family: $secondary-type-font
   border-radius: 0
-  font-weight: 400
+  font-weight: 600
   overflow: hidden
   cursor: pointer
   transition: ease-out color 150ms
@@ -756,6 +805,7 @@ nav
       transition: ease-in-out all 150ms
       -webkit-transition: ease-in-out all 150ms
       -moz-transition: ease-in-out all 150ms
+
 .portfolio
   [class*="col-"],
   [class^="col-"]
@@ -774,6 +824,21 @@ nav
     opacity: 1
   100%
     opacity: 0
+
+/**
+ * Hover menu on desktop
+ */
+html
+  &.ua-desktop
+    body
+      nav:not(.menu-open)
+        #menu-trigger
+          &:hover
+            &:before
+              transform: translateY(-3px)
+            &:after
+              transform: translateY(3px)
+
 @media(max-width: 768px)
   body
     padding: 30px 0
@@ -785,10 +850,11 @@ nav
         font-size: 36px
         line-height: 45px
         span
-          width: 100%
-          display: inline-block
+          &:before
+            bottom: 5px
+            height: 30px
       h2
-        font-size: 14px
+        font-size: 18px
     .btn-scroll
       bottom: 45px
   section
@@ -817,8 +883,12 @@ nav
               background-color: $dark-gray-color
               z-index: 1000
       &.about,
-      &.contact
+      &.contact,
+      &.digital
         padding: 20px 70px 0 70px
+      &.digital
+        padding-top: 0
+        padding-bottom: 30px
   nav
     &.menu
       width: 60px
@@ -842,13 +912,23 @@ nav
         top: 95px
       &.top
         margin-top: -15px
+
 @media(max-width: 640px)
   p
-    font-size: 13px
+    font-size: 14px
+    line-height: 26px
+    &.leading
+      font-size: 18px
+      &:first-letter
+        font-size: 52px
+        line-height: 52px
   h3
     font-size: 20px
     min-height: 20px
     line-height: 20px
+  section
+    .intro
+      font-size: 12px
 
 @media(min-width: 769px) and (max-width: 990px)
   section
@@ -892,15 +972,11 @@ nav
         height: 60px
         border-right: 0!important
     .content
-      &.about
-        img
-          margin-top: 0
       &.about,
-      &.contact
-        padding-left: 40px
-        padding-right: 40px
-        p
-          text-align: center
+      &.contact,
+      &.digital
+        padding-left: 50px
+        padding-right: 50px
       &.portfolio
         margin-bottom: -15px
         [class*="col-"],

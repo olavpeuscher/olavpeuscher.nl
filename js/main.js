@@ -74,10 +74,16 @@ $(document).ready(function () {
         $('#menu-trigger').removeClass('open');
     });
 
+    $('nav .overlay').bind('click', function () {
+        $('nav.menu').removeClass('menu-open');
+        $('#menu-trigger').removeClass('open');
+    });
+
     /**
-     * POrtfolio items texts
+     * Portfolio items texts
      **/
     $('.item .image-wrapper').bind('click', function () {
+        $('body .item.open').removeClass('open');
         $(this).parent().addClass('open');
     });
 
