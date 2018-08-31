@@ -2,7 +2,7 @@
  * Add class to nav when page scrolls
  */
 $(window).scroll(function () {
-    if ($(this).scrollTop() == 0) {
+    if ($(this).scrollTop() === 0) {
         $('li.current').removeClass('current');
     }
 
@@ -31,9 +31,9 @@ $(window).scroll(function () {
     var overlay = $('header .overlay');
 
     var scrollTop = $(this).scrollTop();
-    var height = 0.7 * overlay.height();
+    var height = 0.25 * overlay.height();
 
-    opacity = 0.5 + (0.5 * scrollTop / height)
+    var opacity = 0.5 + (0.5 * scrollTop / height);
     overlay.css({'opacity': opacity});
 
 
