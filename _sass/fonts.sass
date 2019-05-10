@@ -1,6 +1,45 @@
+$base-font-family: 'NHGTP', 'Helvetica', 'Arial', sans-serif
+$display-font-family: 'NHGDP', 'Helvetica', 'Arial', sans-serif
+
+$font-directory: '../fonts/'
+
+/**
+ * NHGTP
+ */
 @font-face
-  font-family: 'IntroBoldAlt'
-  src: url('../fonts/Intro-bold-alt-webfont.eot')
-  src: url('../fonts/Intro-bold-alt-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/Intro-bold-alt-webfont.woff') format('woff'),url('../fonts/Intro-bold-alt-webfont.ttf') format('truetype'),
-  font-weight: normal
+  font-family: 'NHGTP'
+  src: url($font-directory + 'NHaasGroteskTXPro-Rg.eot')
+  src: url($font-directory + 'NHaasGroteskTXPro-Rg.eot?#iefix') format('embedded-opentype'), url($font-directory + 'NHaasGroteskTXPro-Rg.woff2') format('woff2'), url($font-directory + 'NHaasGroteskTXPro-Rg.woff') format('woff'), url($font-directory + 'NHaasGroteskTXPro-Rg.ttf') format('truetype'), url($font-directory + 'NHaasGroteskTXPro-Rg.svg#NHaasGroteskTXPro-Rg') format('svg')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: 'NHGTP'
+  src: url($font-directory + 'NHaasGroteskTXPro-Bd.eot')
+  src: url($font-directory + 'NHaasGroteskTXPro-Bd.eot?#iefix') format('embedded-opentype'), url($font-directory + 'NHaasGroteskTXPro-Bd.woff2') format('woff2'), url($font-directory + 'NHaasGroteskTXPro-Bd.woff') format('woff'), url($font-directory + 'NHaasGroteskTXPro-Bd.ttf') format('truetype'), url($font-directory + 'NHaasGroteskTXPro-Bd.svg#NHaasGroteskTXPro-Bd') format('svg')
+  font-weight: 700
+  font-style: normal
+
+/**
+ * NHGDP
+ */
+@font-face
+  font-family: 'NHGDP'
+  src: url($font-directory + 'NHaasGroteskDSPro-55Rg.eot')
+  src: url($font-directory + 'NHaasGroteskDSPro-55Rg.eot?#iefix') format('embedded-opentype'), url($font-directory + 'NHaasGroteskDSPro-55Rg.woff2') format('woff2'), url($font-directory + 'NHaasGroteskDSPro-55Rg.woff') format('woff'), url($font-directory + 'NHaasGroteskDSPro-55Rg.ttf') format('truetype'), url($font-directory + 'NHaasGroteskDSPro-55Rg.svg#NHaasGroteskDSPro-55Rg') format('svg')
+  font-weight: 400
+  font-style: normal
+
+@font-face
+  font-family: 'NHGDP'
+  src: url($font-directory + 'NHaasGroteskDSPro-65Md.eot')
+  src: url($font-directory + 'NHaasGroteskDSPro-65Md.eot?#iefix') format('embedded-opentype'), url($font-directory + 'NHaasGroteskDSPro-65Md.woff2') format('woff2'), url($font-directory + 'NHaasGroteskDSPro-65Md.woff') format('woff'), url($font-directory + 'NHaasGroteskDSPro-65Md.ttf') format('truetype'), url($font-directory + 'NHaasGroteskDSPro-65Md.svg#NHaasGroteskDSPro-65Md') format('svg')
+  font-weight: 600
+  font-style: normal
+
+@font-face
+  font-family: 'NHGDP'
+  src: url($font-directory + 'NHaasGroteskDSPro-75Bd.eot')
+  src: url($font-directory + 'NHaasGroteskDSPro-75Bd.eot?#iefix') format('embedded-opentype'), url($font-directory + 'NHaasGroteskDSPro-75Bd.woff2') format('woff2'), url($font-directory + 'NHaasGroteskDSPro-75Bd.woff') format('woff'), url($font-directory + 'NHaasGroteskDSPro-75Bd.ttf') format('truetype'), url($font-directory + 'NHaasGroteskDSPro-75Bd.svg#NHaasGroteskDSPro-75Bd') format('svg')
+  font-weight: 700
   font-style: normal
