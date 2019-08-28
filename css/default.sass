@@ -12,41 +12,41 @@ body
   margin: 0
   width: 100%
   padding: 30px
-  font-family: $main-type-font
+  font-family: $base-font-family
 h1
-  color: white
+  font-family: $display-font-family
+  color: $black-color
   font-size: 60px
-  font-weight: 100
+  font-weight: 300
   line-height: 60px
   position: relative
   margin: 0
 h2
+  font-family: $display-font-family
   margin: 0 0 30px 0
   padding: 0
   position: relative
   line-height: 30px
   font-size: 30px
   color: $dark-gray-color
-  text-transform: uppercase
   display: inline-block
   font-weight: 300
   letter-spacing: 2px
   width: 100%
 h3
-  font-family: $main-type-font
+  font-family: $display-font-family
   margin: 0 0 15px 0
   min-height: 25px
   line-height: 25px
   color: $dark-gray-color
   font-size: 24px
-  text-transform: uppercase
   display: inline-block
   font-weight: 300
   width: 100%
 p
-  font-family: $serif-type-font
+  font-family: $base-font-family
   font-size: 16px
-  line-height: 30px
+  line-height: 1.6em
   font-weight: 200
   color: $dark-gray-color
   padding-bottom: 15px
@@ -55,32 +55,17 @@ p
   &:last-child
     padding-bottom: 0
   a
-    color: white
+    color: $dark-gray-color
     text-decoration: none
-    position: relative
     z-index: 2
-    transition: color ease-out 200ms
+    transition: color cubic-bezier(.25,.8,.25,1) 200ms
     cursor: pointer
-    padding: 0 5px
-    display: inline-block
-    &:before
-      content: ''
-      position: absolute
-      width: 100%
-      left: 0
-      bottom: 9px
-      height: 15px
-      background-color: $dark-gray-color
-      z-index: -1
-      transition: background ease-out 200ms
+    box-shadow: inset 0 -0.2em 0 $dark-gray-color
     &:hover
       text-decoration: none
       &:hover
-        color: white
+        color: $red-color
         transition: color ease-in-out 200ms
-        &:before
-          background-color: $red-color
-          transition: background ease-in-out 200ms
   &.leading
     font-size: 20px
     &:first-letter
@@ -100,10 +85,8 @@ p
           background-color: $gray-color
           transition: background ease-in-out 200ms
   &.intro
-    font-family: $main-type-font
     margin: 0 0 15px 0
     min-height: 20px
-    text-transform: uppercase
     font-weight: 300
     span
       position: relative
@@ -128,28 +111,14 @@ header
   display: table
   float: right
   width: 100%
-  height: 80vh
-  background-image: url('/images/header.jpg')
-  background-size: cover
-  background-repeat: no-repeat
-  background-position: center
+  height: calc(100vh - 30px)
   position: relative
-  background-color: #1F1F1F
-  .overlay
-    position: absolute
-    left: 0
-    top: 0
-    height: 100%
-    width: 100%
-    display: inline-block
-    background-color: $dark-gray-color
-    opacity: 0.5
   &:after
     content: ''
     left: 60px
     bottom: 0
     height: 60px
-    width: 1px
+    width: 2px
     position: absolute
     background-color: $red-color
   .btn-scroll
@@ -167,10 +136,10 @@ header
       margin-bottom: 90px
       position: relative
       padding: 0
-      color: white
+      color: $black-color
       &:after
         content: ''
-        height: 1px
+        height: 2px
         width: 60px
         background-color: $red-color
         position: absolute
@@ -190,10 +159,8 @@ header
           z-index: -1
     h2
       line-height: 20px
-      text-transform: uppercase
       font-size: 24px
-      text-shadow: 0 0 15px rgba(0,0,0,0.15)
-      color: white
+      color: $black-color
       span
         margin: 0 5px
 section
@@ -205,7 +172,7 @@ section
   position: relative
   &:before
     content: ''
-    width: 1px
+    width: 2px
     top: 0
     left: 60px
     position: absolute
@@ -218,7 +185,7 @@ section
     &:after,
     &:before
       content: ''
-      height: 1px
+      height: 2px
       position: absolute
       bottom: 0
     &:after
@@ -232,7 +199,7 @@ section
   .intro
     width: 100%
     color: $dark-gray-color
-    font-size: 14px
+    font-size: 16px
     margin-bottom: 90px
   .content
     display: block
@@ -240,7 +207,6 @@ section
     width: 100%
     img
       margin: 30px auto 0 auto
-      box-shadow: 0 0 10px rgba(80,80,80,0.1)
     &.about,
     &.contact,
     &.digital
@@ -263,13 +229,13 @@ section
         position: relative
         width: 100%
         padding: 100% 0 0 0
-        background-color: $dark-gray-color
-        box-shadow: 0 0 10px rgba(80,80,80,0.1)
+        background-color: white
+        box-shadow: none
+        transition: box-shadow 250ms cubic-bezier(.25,.8,.25,1)
         &:not(.open)
           cursor: pointer
         &:hover
-          .image
-            opacity: 0.75
+          box-shadow: 0 7px 20px rgba(0,0,0,0.12), 0 5px 10px rgba(0,0,0,0.15)
         .image-wrapper
           position: absolute
           width: 100%
@@ -287,7 +253,7 @@ section
             left: 0
             top: 0
             transform-origin: 0 0
-            transition: transform ease-out 250ms, opacity ease-out 250ms
+            transition: transform cubic-bezier(.25,.8,.25,1) 250ms, opacity cubic-bezier(.25,.8,.25,1) 250ms
         .body
           width: calc(100% - 60px)
           height: auto
@@ -298,14 +264,14 @@ section
           background-color: $yellow-color
           transform: scale(0)
           transform-origin: 0 0
-          transition: transform ease-out 375ms
+          transition: transform cubic-bezier(.25,.8,.25,1) 375ms
           transition-delay: 125ms
           padding: 30px
           .body-content,
           .body-footer
             width: 100%
             opacity: 0
-            transition: opacity ease-out 250ms
+            transition: opacity cubic-bezier(.25,.8,.25,1) 250ms
           .body-footer
             margin: 30px 0 0 0
         .close
@@ -317,7 +283,7 @@ section
           display: inline-block
           transform: scale(0)
           opacity: 0
-          transition: transform ease-out 250ms, opacity ease-out 250ms
+          transition: transform cubic-bezier(.25,.8,.25,1) 250ms, opacity cubic-bezier(.25,.8,.25,1) 250ms
           cursor: pointer
           &:hover
             opacity: 1 !important
@@ -326,8 +292,8 @@ section
             content: ''
             position: absolute
             width: 100%
-            height: 1px
-            background-color: white
+            height: 2px
+            background-color: $black-color
             top: 50%
             left: 0
             transform-origin: center
@@ -340,19 +306,19 @@ section
           .close
             transform: scale(1)
             opacity: 0.75
-            transition: transform ease-out 250ms, opacity ease-out 250ms
+            transition: transform cubic-bezier(.25,.8,.25,1) 250ms, opacity cubic-bezier(.25,.8,.25,1) 250ms
           .image
             opacity: 0.5
             transform: scale(1.25)
-            transition: transform ease-out 250ms, opacity ease-out 250ms
+            transition: transform cubic-bezier(.25,.8,.25,1) 250ms, opacity cubic-bezier(.25,.8,.25,1) 250ms
           .body
             transform: scale(1)
-            transition: transform ease-out 250ms
+            transition: transform cubic-bezier(.25,.8,.25,1) 250ms
             transition-delay: 125ms
           .body-content,
           .body-footer
             opacity: 1
-            transition: opacity ease-out 250ms
+            transition: opacity cubic-bezier(.25,.8,.25,1) 250ms
             transition-delay: 375ms
   .links
     width: 100%
@@ -367,7 +333,7 @@ section
       background-position: center
       background-repeat: no-repeat
       &:first-child
-        border-right: 1px solid $light-gray-color
+        border-right: 2px solid $light-gray-color
       &.b4b
         background-image: url(../images/svg/b4b.svg)
         background-size: 75%
@@ -388,7 +354,6 @@ footer
     float: left
     width: 100%
     text-align: center
-    font-family: $main-type-font
 nav
   z-index: 999
   position: fixed
@@ -418,22 +383,22 @@ nav
           text-align: center
           color: $gray-color
           text-decoration: none
-          transition: color ease-out 250ms
-          -moz-transition: color ease-out 250ms
-          -webkit-transition: color ease-out 250ms
+          transition: color cubic-bezier(.25,.8,.25,1) 250ms
+          -moz-transition: color cubic-bezier(.25,.8,.25,1) 250ms
+          -webkit-transition: color cubic-bezier(.25,.8,.25,1) 250ms
           &:hover
             color: $red-color
-            transition: color ease-out 250ms
-            -moz-transition: color ease-out 250ms
-            -webkit-transition: color ease-out 250ms
+            transition: color cubic-bezier(.25,.8,.25,1) 250ms
+            -moz-transition: color cubic-bezier(.25,.8,.25,1) 250ms
+            -webkit-transition: color cubic-bezier(.25,.8,.25,1) 250ms
             cursor: pointer
   &.menu
     width: 90px
     height: 100%
-    transition: margin ease-out 250ms
+    transition: margin cubic-bezier(.25,.8,.25,1) 250ms
     &.top
       margin-top: -30px
-      transition: margin ease-out 250ms
+      transition: margin cubic-bezier(.25,.8,.25,1) 250ms
     &.scrolled
       #menu-trigger
         background-color: $dark-gray-color
@@ -448,9 +413,9 @@ nav
             &:before
               color: white
               background-color: $dark-gray-color
-              transition: color ease-out 250ms, background ease-out 250ms
-              -moz-transition: color ease-out 250ms, background ease-out 250ms
-              -webkit-transition: color ease-out 250ms, background ease-out 250ms
+              transition: color cubic-bezier(.25,.8,.25,1) 250ms, background cubic-bezier(.25,.8,.25,1) 250ms
+              -moz-transition: color cubic-bezier(.25,.8,.25,1) 250ms, background cubic-bezier(.25,.8,.25,1) 250ms
+              -webkit-transition: color cubic-bezier(.25,.8,.25,1) 250ms, background cubic-bezier(.25,.8,.25,1) 250ms
       .overlay
         background-color: rgba(255,255,255,0.75)
     .overlay
@@ -461,9 +426,9 @@ nav
       height: 100%
       width: 100%
       background-color: rgba(61,51,41,0.5)
-      transition: background ease-out 250ms
-      -moz-transition: background ease-out 250ms
-      -webkit-transition: background ease-out 250ms
+      transition: background cubic-bezier(.25,.8,.25,1) 250ms
+      -moz-transition: background cubic-bezier(.25,.8,.25,1) 250ms
+      -webkit-transition: background cubic-bezier(.25,.8,.25,1) 250ms
     ul
       list-style-type: none
       padding: 0
@@ -478,9 +443,9 @@ nav
         position: relative
         width: 100%
         margin: 5px 0
-        transition: transform ease-out 250ms
-        -moz-transition: transform ease-out 250ms
-        -webkit-transition: transform ease-out 250ms
+        transition: transform cubic-bezier(.25,.8,.25,1) 250ms
+        -moz-transition: transform cubic-bezier(.25,.8,.25,1) 250ms
+        -webkit-transition: transform cubic-bezier(.25,.8,.25,1) 250ms
         transition-delay: 100ms
         -moz-transition-delay: 100ms
         -webkit-transition-delay: 100ms
@@ -488,7 +453,6 @@ nav
           padding: 10px 0 10px 50px
           line-height: 20px
           font-size: 14px
-          text-transform: uppercase
           font-weight: 400
           position: relative
           display: inline-block
@@ -496,9 +460,9 @@ nav
           width: 100%
           opacity: 0
           transform-origin: 0 50%
-          transition: opacity ease-out 250ms
-          -moz-transition: opacity ease-out 250ms
-          -webkit-transition: opacity ease-out 250ms
+          transition: opacity cubic-bezier(.25,.8,.25,1) 250ms
+          -moz-transition: opacity cubic-bezier(.25,.8,.25,1) 250ms
+          -webkit-transition: opacity cubic-bezier(.25,.8,.25,1) 250ms
           color: white
           cursor: pointer
           &:before
@@ -515,9 +479,9 @@ nav
             left: 0
             top: 0
             transform: scale(0)
-            transition: transform ease-out 250ms, color ease-out 250ms, background ease-out 250ms
-            -moz-transition: transform ease-out 250ms, color ease-out 250ms, background ease-out 250ms
-            -webkit-transition: transform ease-out 250ms, color ease-out 250ms, background ease-out 250ms
+            transition: transform cubic-bezier(.25,.8,.25,1) 250ms, color cubic-bezier(.25,.8,.25,1) 250ms, background cubic-bezier(.25,.8,.25,1) 250ms
+            -moz-transition: transform cubic-bezier(.25,.8,.25,1) 250ms, color cubic-bezier(.25,.8,.25,1) 250ms, background cubic-bezier(.25,.8,.25,1) 250ms
+            -webkit-transition: transform cubic-bezier(.25,.8,.25,1) 250ms, color cubic-bezier(.25,.8,.25,1) 250ms, background cubic-bezier(.25,.8,.25,1) 250ms
             transform-origin: center center
             -moz-transform-origin: center center
             -webkit-transform-origin: center center
@@ -532,9 +496,9 @@ nav
           transform: translateY(-120px)
           a,
           a:before
-            transition-delay: 150ms
-            -moz-transition-delay: 150ms
-            -webkit-transition-delay: 150ms
+            transition-delay: 250ms
+            -moz-transition-delay: 250ms
+            -webkit-transition-delay: 250ms
         &:nth-child(3)
           transform: translateY(-175px)
           a,
@@ -561,14 +525,14 @@ nav
       transform-origin: center center
       -webkit-transform-origin: center center
       -moz-transform-origin: center center
-      transition: all ease-out 250ms
-      -webkit-transition: all ease-out 250ms
-      -moz-transition: all ease-out 250ms
+      transition: all cubic-bezier(.25,.8,.25,1) 250ms
+      -webkit-transition: all cubic-bezier(.25,.8,.25,1) 250ms
+      -moz-transition: all cubic-bezier(.25,.8,.25,1) 250ms
       &:before,
       &:after,
       span
         width: 20px
-        height: 1px
+        height: 2px
         background-color: $dark-gray-color
         display: block
         position: absolute
@@ -576,9 +540,9 @@ nav
         transform-origin: center center
         -webkit-transform-origin: center center
         -moz-transform-origin: center center
-        transition: all ease-out 250ms
-        -webkit-transition: all ease-out 250ms
-        -moz-transition: all ease-out 250ms
+        transition: all cubic-bezier(.25,.8,.25,1) 250ms
+        -webkit-transition: all cubic-bezier(.25,.8,.25,1) 250ms
+        -moz-transition: all cubic-bezier(.25,.8,.25,1) 250ms
       span
         top: 30px
       &:before,
@@ -596,36 +560,36 @@ nav
         transform: rotate(135deg)
         -webkit-transform: rotate(135deg)
         -moz-transform: rotate(135deg)
-        transition: all ease-in 150ms
-        -webkit-transition: all ease-in 150ms
-        -moz-transition: all ease-in 150ms
+        transition: all ease-in 250ms
+        -webkit-transition: all ease-in 250ms
+        -moz-transition: all ease-in 250ms
         &:before
           transform: translateY(6px) rotate(0deg)
           -webkit-transform: translateY(6px) rotate(0deg)
           -moz-transform: translateY(6px) rotate(0deg)
-          transition: all ease-in 150ms
-          -webkit-transition: all ease-in 150ms
-          -moz-transition: all ease-in 150ms
+          transition: all ease-in 250ms
+          -webkit-transition: all ease-in 250ms
+          -moz-transition: all ease-in 250ms
         &:after
           transform: translateY(-6px) rotate(-90deg)
           -webkit-transform: translateY(-6px) rotate(-90deg)
           -moz-transform: translateY(-6px) rotate(-90deg)
-          transition: all ease-in 150ms
-          -webkit-transition: all ease-in 150ms
-          -moz-transition: all ease-in 150ms
+          transition: all ease-in 250ms
+          -webkit-transition: all ease-in 250ms
+          -moz-transition: all ease-in 250ms
         span
           opacity: 0
     &.menu-open
       ul
         li
           transform: translateY(0) !important
-          transition: transform ease-out 250ms
+          transition: transform cubic-bezier(.25,.8,.25,1) 250ms
           a
             opacity: 1
-            transition: opacity ease-out 250ms
+            transition: opacity cubic-bezier(.25,.8,.25,1) 250ms
             &:before
               transform: scale(1)
-              transition: transform ease-out 250ms
+              transition: transform cubic-bezier(.25,.8,.25,1) 250ms
           &:nth-child(1)
             a,
             a:before
@@ -637,7 +601,7 @@ nav
           &:nth-child(3)
             a,
             a:before
-              transition-delay: 150ms
+              transition-delay: 250ms
           &:nth-child(4)
             a,
             a:before
@@ -676,13 +640,13 @@ nav
   &:before,
   &:after
     content: ''
-    width: 1px
+    width: 2px
     height: 40px
     position: absolute
     transform-origin: center 40px
     -webkit-transform-origin: center 40px
     -moz-transform-origin: center 40px
-    background-color: white
+    background-color: $black-color
     left: 50%
     bottom: 0
   &:before
@@ -730,20 +694,19 @@ nav
   width: auto
   min-width: 100px
   padding: 9px 15px
-  height: 36px
+  height: 40px
   line-height: 18px
   font-size: 16px
-  border: 1px solid $dark-gray-color
+  border: 2px solid $dark-gray-color
   color: $dark-gray-color
-  text-transform: uppercase
-  font-family: $secondary-type-font
+  font-family: $display-font-family
   border-radius: 0
-  font-weight: 600
+  font-weight: 400
   overflow: hidden
   cursor: pointer
-  transition: ease-out color 150ms
-  -webkit-transition: ease-out color 150ms
-  -moz-transition: ease-out color 150ms
+  transition: cubic-bezier(.25,.8,.25,1) color 250ms
+  -webkit-transition: cubic-bezier(.25,.8,.25,1) color 250ms
+  -moz-transition: cubic-bezier(.25,.8,.25,1) color 250ms
   z-index: 1
   &:after,
   &:before
@@ -754,9 +717,9 @@ nav
     width: 100%
     opacity: 0
     filter: alpha(opacity=0)
-    transition: ease-out all 150ms
-    -webkit-transition: ease-out all 150ms
-    -moz-transition: ease-out all 150ms
+    transition: cubic-bezier(.25,.8,.25,1) all 250ms
+    -webkit-transition: cubic-bezier(.25,.8,.25,1) all 250ms
+    -moz-transition: cubic-bezier(.25,.8,.25,1) all 250ms
     z-index: -1
   &:after
     border-top: 38px solid $dark-gray-color
@@ -776,9 +739,9 @@ nav
     -moz-transform: translateY(40px)
   &:hover
     color: #ffffff
-    transition: ease-in-out color 150ms
-    -webkit-transition: ease-in-out color 150ms
-    -moz-transition: ease-in-out color 150ms
+    transition: ease-in-out color 250ms
+    -webkit-transition: ease-in-out color 250ms
+    -moz-transition: ease-in-out color 250ms
     &:before,
     &:after
       transform: translateY(0px)
@@ -786,9 +749,9 @@ nav
       -moz-transform: translateY(0px)
       opacity: 1
       filter: alpha(opacity=100)
-      transition: ease-in-out all 150ms
-      -webkit-transition: ease-in-out all 150ms
-      -moz-transition: ease-in-out all 150ms
+      transition: ease-in-out all 250ms
+      -webkit-transition: ease-in-out all 250ms
+      -moz-transition: ease-in-out all 250ms
 
 .portfolio
   [class*="col-"],
@@ -824,11 +787,9 @@ html
               transform: translateY(3px)
       .links
         .logo
-          opacity: 0.75
-          transition: opacity ease-out 150ms
+          transition: opacity cubic-bezier(.25,.8,.25,1) 250ms
           &:hover
-            opacity: 1
-            transition: opacity ease-out 150ms
+            opacity: 0.75
 
 @media(max-width: 768px)
   body
@@ -919,7 +880,7 @@ html
     line-height: 20px
   section
     .intro
-      font-size: 12px
+      font-size: 14px
 
 @media(min-width: 769px) and (max-width: 990px)
   section
